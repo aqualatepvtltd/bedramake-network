@@ -152,7 +152,7 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
             <div className="w-full h-[650px] overflow-hidden bg-white">
               <iframe
                 id="scholar-google-form-iframe"
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfD_Z6jWeU_wRjI08_Mep1VFrIUnSjG_eFv3lEeywU_4M8R4A/viewform?embedded=true"
+                src="https://forms.gle/GV3gfJxJmdXnxA1B6"
                 className="w-full h-full border-none"
                 title="Bedramake Network Scholar Review Submission Form"
               >
