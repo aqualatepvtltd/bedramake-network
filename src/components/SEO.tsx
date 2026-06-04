@@ -16,7 +16,7 @@ export default function SEO({
   keywords,
   canonical,
   ogType = 'website',
-  ogImage = './Bedramake Main Logo.webp',
+  ogImage = '/Bedramake Main Logo.webp',
   schema
 }: SEOProps) {
   useEffect(() => {
