@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   GraduationCap, FileText, Send, Eye, ShieldCheck, 
-  Sparkles, ExternalLink, FileCheck, AlertCircle, RefreshCw 
+  Sparkles, ExternalLink, FileCheck, AlertCircle
 } from 'lucide-react';
 
 interface ScholarSubmissionProps {
@@ -128,36 +128,55 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
             </div>
           </div>
 
-
-          {/* Google Form Iframe Container */}
-          <div className="border border-slate-200 rounded-2xl overflow-hidden shadow-sm bg-slate-50 relative">
-            <div className="bg-slate-100 px-4 py-2 flex items-center justify-between border-b border-slate-200 text-xs text-slate-500 font-mono">
-              <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-400 inline-block" />
-                <span className="w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block" />
-                <span className="w-2.5 h-2.5 rounded-full bg-green-400 inline-block" />
-                <span className="ml-2 font-mono truncate max-w-xs md:max-w-md">docs.google.com/forms/scholar-submission</span>
-              </span>
-              <button 
-                onClick={() => {
-                  const el = document.getElementById('scholar-google-form-iframe') as HTMLIFrameElement;
-                  if (el) el.src = el.src;
-                }}
-                className="hover:text-indigo-600 transition-colors cursor-pointer flex items-center gap-1 font-bold uppercase text-[9px]"
-              >
-                <RefreshCw className="w-3 h-3" /> Refresh Frame
-              </button>
+          {/* Pre-submission Guide & External Gateway */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-slate-50 border border-slate-200 rounded-3xl p-6 md:p-10">
+            <div className="space-y-6">
+              <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">Pre-Submission Checklist</h3>
+              <ul className="space-y-4">
+                <li className="flex gap-3 items-start">
+                  <div className="bg-indigo-100 p-1.5 rounded-lg text-indigo-600 shrink-0">
+                    <FileCheck className="w-4 h-4" />
+                  </div>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    <span className="font-bold text-slate-800">Manuscript Files:</span> Have your empirical review or research draft ready in <span className="font-mono text-xs font-bold text-indigo-600">.docx</span> or <span className="font-mono text-xs font-bold text-indigo-600">.pdf</span> format for upload.
+                  </p>
+                </li>
+                <li className="flex gap-3 items-start">
+                  <div className="bg-indigo-100 p-1.5 rounded-lg text-indigo-600 shrink-0">
+                    <ShieldCheck className="w-4 h-4" />
+                  </div>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    <span className="font-bold text-slate-800">Payment Verification:</span> Have your phone ready to complete the submission amount verification as per the form instructions.
+                  </p>
+                </li>
+                <li className="flex gap-3 items-start">
+                  <div className="bg-indigo-100 p-1.5 rounded-lg text-indigo-600 shrink-0">
+                    <Sparkles className="w-4 h-4" />
+                  </div>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    <span className="font-bold text-slate-800">Personal Metadata:</span> Ensure you have all personal details (Phone number, Scholarly Email, Affiliation) ready before starting.
+                  </p>
+                </li>
+              </ul>
+              <div className="flex items-center gap-2 text-[11px] text-amber-700 font-bold bg-amber-50 border border-amber-100 p-3 rounded-xl">
+                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                Important: You must be signed into your Google Account to upload files to this gateway.
+              </div>
             </div>
 
-            <div className="w-full h-[650px] overflow-hidden bg-white">
-              <iframe
-                id="scholar-google-form-iframe"
-                src="https://forms.gle/GV3gfJxJmdXnxA1B6"
-                className="w-full h-full border-none"
-                title="Bedramake Network Scholar Review Submission Form"
+            <div className="flex flex-col items-center justify-center space-y-5 lg:border-l border-slate-200 lg:pl-10">
+              <p className="text-xs md:text-sm text-slate-500 text-center max-w-xs leading-relaxed">
+                Are you ready with your information and documents? Click the button below to launch the official Google Form gateway.
+              </p>
+              <a 
+                href="https://forms.gle/GV3gfJxJmdXnxA1B6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md group cursor-pointer text-sm"
               >
-                Loading submission frame...
-              </iframe>
+                Proceed to Submission Gateway
+                <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
             </div>
           </div>
         </div>
