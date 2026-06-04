@@ -172,7 +172,7 @@ export default function SectorScholar({ setActiveTab }: SectorScholarProps) {
                 <AlertCircle className="w-12 h-12 text-slate-350 mx-auto" />
                 <h4 className="font-extrabold text-slate-800 text-base">No papers found</h4>
                 <p className="text-xs text-slate-500 max-w-sm mx-auto">
-                  Try clearing your search filters or write to coordination@bedramake.org to register your upcoming manuscript.
+                  Try clearing your search filters or write to coordination@bedramake.org or teambedr@gmail.com to register your upcoming manuscript.
                 </p>
               </div>
             )}

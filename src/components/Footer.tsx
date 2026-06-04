@@ -129,8 +129,12 @@ export default function Footer({ setActiveTab }: FooterProps) {
               <span>editorial@bedramake.org</span>
             </div>
             <div className="flex items-start gap-2.5 text-sm">
+              <Mail className="w-4 h-4 text-slate-500 mt-0.5 shrink-0" />
+              <span>teambedr@gmail.com</span>
+            </div>
+            <div className="flex items-start gap-2.5 text-sm">
               <Phone className="w-4 h-4 text-slate-500 mt-0.5 shrink-0" />
-              <span>+91 9845X XXXXX (India Coordinator)</span>
+              <span>+91 6307595827</span>
             </div>
             <div className="flex items-start gap-2.5 text-sm">
               <MapPin className="w-4 h-4 text-slate-500 mt-0.5 shrink-0" />

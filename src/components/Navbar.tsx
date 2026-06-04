@@ -16,11 +16,11 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
     { id: 'scholar-submission' as ActiveTab, name: 'Submit Paper', icon: Send },
     { id: 'publishing' as ActiveTab, name: 'Publishing Help', icon: BookOpen },
     { id: 'writing' as ActiveTab, name: 'Writing Help', icon: PenTool },
-    { id: 'tools' as ActiveTab, name: 'Editor Tools', icon: Cpu },
-    { id: 'about' as ActiveTab, name: 'About', icon: Info },
-    { id: 'contact' as ActiveTab, name: 'Contact', icon: Mail },
     { id: 'jobs' as ActiveTab, name: 'Job Help', icon: Briefcase },
     { id: 'admission' as ActiveTab, name: 'Admission Help', icon: GraduationCap },
+    { id: 'tools' as ActiveTab, name: 'Editor Tools', icon: Cpu },
+    { id: 'contact' as ActiveTab, name: 'Contact', icon: Mail },
+    { id: 'about' as ActiveTab, name: 'About', icon: Info },
   ];
 
   return (

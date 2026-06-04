@@ -1,11 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { ActiveTab } from '../types';
-import { SECTORS, TESTIMONIALS, FAQ_ITEMS, EDITORIAL_BOARD, FOUNDERS } from '../data';
+import { SECTORS, FAQ_ITEMS, EDITORIAL_BOARD, FOUNDERS } from '../data';
 import { 
   BookOpen, Sparkles, Cpu, PenTool, ArrowRight, CheckCircle2, 
   Award, ShieldCheck, Zap, Users, ShieldAlert, BarChart3, ChevronRight,
   HelpCircle, ChevronDown, ChevronLeft
 } from 'lucide-react';
+
+const HUMANIZED_TESTIMONIALS = [
+  {
+    name: "Dr. Ishita Verma",
+    comment: "Managing a heavy teaching load at DU while finishing my PhD was exhausting. The Bedramake writing desk took my raw lab notes and helped me draft a manuscript that actually got accepted by IEEE. They are lifesavers for Indian academics.",
+    role: "Assistant Professor",
+    affiliation: "University of Delhi"
+  },
+  {
+    name: "Rahul Deshmukh",
+    comment: "I was worried about the plagiarism threshold for my first review paper. The Turnitin verification and the sentence-level editing by the mentors here made all the difference. Seeing my work on the Scholar Index registry is a dream come true.",
+    role: "Senior Research Fellow",
+    affiliation: "IISc Bangalore"
+  },
+  {
+    name: "Priya Sundaram",
+    comment: "The transition from a technical draft to a polished publication is the hardest part. The double-blind review feedback was brutal but honest, and it pushed my research to a level I didn't think possible. Highly recommended for SRF scholars.",
+    role: "JRF Candidate",
+    affiliation: "Anna University"
+  }
+];
 
 interface LandingPageProps {
   setActiveTab: (tab: ActiveTab) => void;
@@ -223,7 +244,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
                     onClick={() => setActiveTab(sector.id as any)}
                     className="w-full flex items-center justify-between text-xs font-semibold text-slate-900 hover:text-indigo-600 transition-colors group cursor-pointer"
                   >
-                    <span>Open Sector Workspace</span>
+                    <span>Open Workspace</span>
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
@@ -570,7 +591,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map((t, idx) => (
+            {HUMANIZED_TESTIMONIALS.map((t, idx) => (
               <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between">
                 <p className="text-sm italic text-slate-600 leading-relaxed mb-6">
                   "{t.comment}"

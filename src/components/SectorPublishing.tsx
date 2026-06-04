@@ -254,7 +254,7 @@ export default function SectorPublishing() {
                         required
                         value={formData.clientName}
                         onChange={handleInputChange}
-                        placeholder="Dr. Samantha Cooper"
+                        placeholder="Dr. Kavita Menon"
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
                       />
                     </div>
@@ -269,7 +269,7 @@ export default function SectorPublishing() {
                         required
                         value={formData.clientEmail}
                         onChange={handleInputChange}
-                        placeholder="sam.cooper@university.org"
+                        placeholder="k.menon@jnu.ac.in"
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
                       />
                     </div>

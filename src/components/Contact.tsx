@@ -134,6 +134,23 @@ export default function Contact() {
                   </div>
                 </a>
 
+                <a 
+                  href="mailto:teambedr@gmail.com"
+                  className="flex gap-3 items-center p-3 hover:bg-slate-50 rounded-xl transition-colors border border-transparent hover:border-slate-100 group"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-900">
+                    <Mail className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-bold block">
+                      Team Bedr Support
+                    </span>
+                    <span className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                      teambedr@gmail.com
+                    </span>
+                  </div>
+                </a>
+
                 <div 
                   className="flex gap-3 items-center p-3 border border-slate-100 rounded-xl bg-slate-50/50"
                 >
@@ -146,6 +163,20 @@ export default function Contact() {
                     </span>
                     <span className="text-xs font-bold text-slate-900">
                       Mon - Sat • 09:30 AM - 06:30 PM (IST)
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex gap-3 items-center p-3 border border-slate-100 rounded-xl bg-slate-50/50">
+                  <div className="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
+                    <Phone className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-bold block">
+                      Team Bedr Phone
+                    </span>
+                    <span className="text-xs font-bold text-slate-900">
+                      +91 6307595827
                     </span>
                   </div>
                 </div>
@@ -221,7 +252,7 @@ export default function Contact() {
                       type="text" 
                       name="name"
                       required
-                      placeholder="e.g. Dr. Emily Carter"
+                      placeholder="e.g. Dr. Vikram Iyer"
                       value={formData.name}
                       onChange={handleInputChange}
                       className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
@@ -236,7 +267,7 @@ export default function Contact() {
                       type="email" 
                       name="email"
                       required
-                      placeholder="e.g. e.carter@oxford.ac.uk"
+                      placeholder="e.g. vikram.iyer@bits-pilani.ac.in"
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"

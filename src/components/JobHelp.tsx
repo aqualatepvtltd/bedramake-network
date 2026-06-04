@@ -3,32 +3,14 @@ import { Briefcase, FileText, Send, Check, Search, Calendar, DollarSign, Award, 
 
 const JOBS_DATA = [
   {
-    id: 'copyeditor',
-    title: 'Academic ESL Copyeditor',
-    type: 'Freelance / Remote',
-    compensation: '₹1,500 - ₹3,500 per manuscript',
-    department: 'English Editing Division',
-    desc: 'Verify grammatical flow, punctuation, and style index adherence for global journal submissions.',
+    id: 'open-role',
+    title: 'Open Position',
+    type: 'Freelance / Remote / Hybrid',
+    compensation: '₹30,000 - ₹50,000',
+    department: 'All Departments',
+    desc: 'We are continuously seeking talented copyeditors, statistical consultants, and peer reviewers across all scientific disciplines to join our global panel. If you have a strong academic background and a passion for research integrity, we encourage you to apply.',
     requirements: ['Master’s or PhD degree in any science or humanities branch.', 'Exceptional familiarity with AMA, APA, IEEE structure indices.', 'Prior copyediting history is a definite preference.'],
   },
-  {
-    id: 'reviewer',
-    title: 'Peer Metadata & Double-Blind Reviewer',
-    type: 'Part-Time / Remote',
-    compensation: '₹3,000 - ₹7,000 per review task',
-    department: 'Scholarly Peer-Review Board',
-    desc: 'Critically analyze methodologies, dataset validation accuracy, and claims of original research articles prior to mock journal submission.',
-    requirements: ['Doctoral Degree (PhD) with at least 3 active peer-reviewed publications.', 'Domain expertise in Deep Learning, Bio-Medicine, or Material Science.', 'Strict commitment to COPE confidentiality rules.'],
-  },
-  {
-    id: 'statscounsel',
-    title: 'Statistical Analyst (R / SPSS / Python)',
-    type: 'Contract basis',
-    compensation: '₹4,000 - ₹9,500 per project',
-    department: 'Quantitative Analysis Advisory',
-    desc: 'Advise authors on correcting their standard regression models, confidence score margins, and data charts creation.',
-    requirements: ['Strong command of R Studio, SPSS, or Python data stack (pandas, numpy, scipy).', 'Familiarity with clinical trials and ANOVA testing frameworks.', 'Ability to write clear data review logs.'],
-  }
 ];
 
 export default function JobHelp() {
@@ -171,9 +153,9 @@ export default function JobHelp() {
 
                     <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
                       <div className="space-y-1">
-                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest font-semibold block">Estimated Honorarium:</span>
+                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest font-semibold block">Estimated Salary</span>
                         <span className="font-bold text-emerald-600 flex items-center gap-0.5">
-                          <DollarSign className="w-3.5 h-3.5" />
+                          
                           {job.compensation}
                         </span>
                       </div>
@@ -206,7 +188,7 @@ export default function JobHelp() {
                   <Briefcase className="w-12 h-12 text-slate-350 mx-auto" />
                   <h4 className="font-bold text-slate-800">No vacancies match your keywords</h4>
                   <p className="text-xs text-slate-500 max-w-sm mx-auto">
-                    Try searching for wider categories like "editor" or "reviewer", or write to us directly at peer.panel@bedramake.org.
+                    Try searching for wider categories like "editor" or "reviewer", or write to us directly at peer.panel@bedramake.org or teambedr@gmail.com.
                   </p>
                 </div>
               )}
@@ -269,7 +251,7 @@ export default function JobHelp() {
                         type="text" 
                         name="applicantName"
                         required
-                        placeholder="Dr. Robert Mercer"
+                        placeholder="Dr. Anirudh Sharma"
                         value={formData.applicantName}
                         onChange={handleInputChange}
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
@@ -284,7 +266,7 @@ export default function JobHelp() {
                         type="email" 
                         name="applicantEmail"
                         required
-                        placeholder="robert.mercer@oxford-research.net"
+                        placeholder="anirudh.sharma@iitb.ac.in"
                         value={formData.applicantEmail}
                         onChange={handleInputChange}
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
