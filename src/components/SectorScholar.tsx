@@ -49,7 +49,7 @@ export default function SectorScholar({ setActiveTab }: SectorScholarProps) {
               className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-5 py-3 rounded-2xl flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
             >
               <Send className="w-3.5 h-3.5" />
-              Publish To Us (Google Form Gate)
+              Publish To Us (Apply Now)
             </button>
             <a
               href="#registry-section"

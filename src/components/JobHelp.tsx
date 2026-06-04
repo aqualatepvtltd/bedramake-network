@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Briefcase, FileText, Send, Check, Search, Calendar, DollarSign, Award, ArrowUpRight } from 'lucide-react';
+import { Briefcase, FileText, Send, Check, Search, Calendar, DollarSign, Award, ArrowUpRight, RefreshCw, AlertCircle } from 'lucide-react';
 
 const JOBS_DATA = [
   {
@@ -36,11 +36,52 @@ export default function JobHelp() {
   const [selectedJob, setSelectedJob] = useState<string | null>(null);
 
   // Form states
-  const [applicantName, setApplicantName] = useState('');
-  const [applicantEmail, setApplicantEmail] = useState('');
-  const [qualification, setQualification] = useState('phd');
-  const [experience, setExperience] = useState('');
+  const [formData, setFormData] = useState({
+    applicantName: '',
+    applicantEmail: '',
+    qualification: 'phd',
+    experience: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleApplySubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setSubmitError(null);
+
+    const payload = {
+      ...formData,
+      target_position: selectedJob || 'General Registry',
+      access_key: "ea758345-9811-42db-9445-96a78c92360a",
+      from_name: "Bedramake Careers Portal",
+      subject_line: `Job Application: ${selectedJob || 'General'}`
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setSubmitError("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      setSubmitError("Network error. Please check your connection.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const filteredJobs = useMemo(() => {
     const term = searchTerm.trim().toLowerCase();
@@ -51,12 +92,6 @@ export default function JobHelp() {
       j.desc.toLowerCase().includes(term)
     );
   }, [searchTerm]);
-
-  const handleApplySubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!applicantName || !applicantEmail) return;
-    setSubmitted(true);
-  };
 
   const handleOpenApplyForm = (jobTitle: string) => {
     setSelectedJob(jobTitle);
@@ -200,6 +235,13 @@ export default function JobHelp() {
 
                   <div className="h-px bg-slate-110" />
 
+                  {submitError && (
+                    <div className="p-4 bg-rose-50 border border-rose-100 text-rose-600 rounded-xl text-xs font-bold flex items-center gap-3">
+                      <AlertCircle className="w-4 h-4" />
+                      {submitError}
+                    </div>
+                  )}
+
                   {/* Prepopulated or Selected Position Indicator */}
                   <div>
                     <label className="text-[10px] font-mono tracking-wider text-slate-400 uppercase font-bold block mb-1">
@@ -225,10 +267,11 @@ export default function JobHelp() {
                       </label>
                       <input 
                         type="text" 
+                        name="applicantName"
                         required
                         placeholder="Dr. Robert Mercer"
-                        value={applicantName}
-                        onChange={(e) => setApplicantName(e.target.value)}
+                        value={formData.applicantName}
+                        onChange={handleInputChange}
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
                       />
                     </div>
@@ -239,10 +282,11 @@ export default function JobHelp() {
                       </label>
                       <input 
                         type="email" 
+                        name="applicantEmail"
                         required
                         placeholder="robert.mercer@oxford-research.net"
-                        value={applicantEmail}
-                        onChange={(e) => setApplicantEmail(e.target.value)}
+                        value={formData.applicantEmail}
+                        onChange={handleInputChange}
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
                       />
                     </div>
@@ -261,9 +305,9 @@ export default function JobHelp() {
                           <button
                             key={q.id}
                             type="button"
-                            onClick={() => setQualification(q.id)}
+                            onClick={() => setFormData(prev => ({ ...prev, qualification: q.id }))}
                             className={`p-2 border text-left rounded-xl transition-all text-[11px] font-semibold cursor-pointer ${
-                              qualification === q.id 
+                              formData.qualification === q.id 
                                 ? 'border-indigo-600 bg-indigo-50 text-indigo-950 font-bold' 
                                 : 'border-slate-150 hover:bg-slate-50 text-slate-600'
                             }`}
@@ -280,10 +324,11 @@ export default function JobHelp() {
                       </label>
                       <textarea 
                         rows={4}
+                        name="experience"
                         required
                         placeholder="Briefly index your Google Scholar profile, citation index, publications or editorial experience..."
-                        value={experience}
-                        onChange={(e) => setExperience(e.target.value)}
+                        value={formData.experience}
+                        onChange={handleInputChange}
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white resize-none"
                       />
                     </div>
@@ -291,10 +336,15 @@ export default function JobHelp() {
 
                   <button
                     type="submit"
-                    className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium p-3 rounded-2xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
+                    disabled={isLoading}
+                    className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium p-3 rounded-2xl text-xs transition-all flex items-center justify-center gap-1.5 shadow-sm cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-3.5 h-3.5" />
-                    Submit Panel Application
+                    {isLoading ? (
+                      <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                    ) : (
+                      <Send className="w-3.5 h-3.5" />
+                    )}
+                    {isLoading ? 'Processing...' : 'Submit Panel Application'}
                   </button>
                 </form>
               ) : (
@@ -305,19 +355,18 @@ export default function JobHelp() {
                   <div className="space-y-1">
                     <h3 className="font-bold text-slate-900 text-base">Application Received</h3>
                     <p className="text-xs text-slate-500 leading-relaxed">
-                      Dear <span className="font-semibold text-slate-800">{applicantName}</span>, your panel review registration for <span className="font-semibold text-slate-800">{selectedJob || 'Scholarly Registry'}</span> is saved.
+                      Dear <span className="font-semibold text-slate-800">{formData.applicantName}</span>, your panel review registration for <span className="font-semibold text-slate-800">{selectedJob || 'Scholarly Registry'}</span> is saved.
                     </p>
                     <p className="text-xs text-indigo-605">
-                      Our board recruitment desk will analyze your Google Scholar metrics and reach out at <span className="font-semibold">{applicantEmail}</span> within 72 hours.
+                      Our board recruitment desk will analyze your Google Scholar metrics and reach out at <span className="font-semibold">{formData.applicantEmail}</span> within 72 hours.
                     </p>
                   </div>
 
                   <button
                     onClick={() => {
                       setSubmitted(false);
-                      setApplicantName('');
-                      setApplicantEmail('');
-                      setExperience('');
+                      setFormData({ applicantName: '', applicantEmail: '', qualification: 'phd', experience: '' });
+                      setSubmitError(null);
                     }}
                     className="text-xs text-indigo-600 hover:text-indigo-700 font-bold"
                   >

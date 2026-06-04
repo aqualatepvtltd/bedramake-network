@@ -1,17 +1,55 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Check, Clock, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Check, Clock, Globe, AlertCircle, RefreshCw } from 'lucide-react';
+import SEO from './SEO';
 
 export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('publishing');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: 'publishing',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !email || !message) return;
-    setSubmitted(true);
+    setIsLoading(true);
+    setSubmitError(null);
+
+    const payload = {
+      ...formData,
+      access_key: "ea758345-9811-42db-9445-96a78c92360a",
+      from_name: "Bedramake Network Contact Hub",
+      subject_line: `New Inquiry: ${formData.subject}`
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setSubmitError("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      setSubmitError("Network error. Please check your connection.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const offices = [
@@ -146,6 +184,11 @@ export default function Contact() {
 
           {/* Right panel - Dynamic Message board (7 cols) */}
           <div className="lg:col-span-7 bg-white border border-slate-150 p-6 md:p-8 rounded-3xl shadow-sm">
+            <SEO 
+              title="Contact Academic Offices" 
+              description="Have questions about indexing, manuscript criteria, or reviewer vacancies? Reach out directly to our coordinators."
+              keywords={['contact', 'support', 'academic publishing', 'help desk']}
+            />
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-5 animate-fade-in">
                 <div className="space-y-1">
@@ -162,6 +205,13 @@ export default function Contact() {
 
                 <div className="h-px bg-slate-100" />
 
+                {submitError && (
+                  <div className="p-4 bg-rose-50 border border-rose-100 text-rose-600 rounded-xl text-xs font-bold flex items-center gap-3">
+                    <AlertCircle className="w-4 h-4" />
+                    {submitError}
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.55">
                     <label className="text-[10px] font-mono tracking-wider text-slate-400 uppercase font-bold block">
@@ -169,10 +219,11 @@ export default function Contact() {
                     </label>
                     <input 
                       type="text" 
+                      name="name"
                       required
                       placeholder="e.g. Dr. Emily Carter"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      value={formData.name}
+                      onChange={handleInputChange}
                       className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
                     />
                   </div>
@@ -183,10 +234,11 @@ export default function Contact() {
                     </label>
                     <input 
                       type="email" 
+                      name="email"
                       required
                       placeholder="e.g. e.carter@oxford.ac.uk"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      value={formData.email}
+                      onChange={handleInputChange}
                       className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
                     />
                   </div>
@@ -197,8 +249,9 @@ export default function Contact() {
                     Inquiry Area *
                   </label>
                   <select 
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
                     className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white cursor-pointer"
                   >
                     <option value="publishing">Publishing Services Indian/Global Journals</option>
@@ -214,21 +267,27 @@ export default function Contact() {
                     Detailed Message *
                   </label>
                   <textarea 
+                    name="message"
                     rows={5}
                     required
                     placeholder="Express your specific queries, manuscript status, target timelines or reference concerns..."
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    value={formData.message}
+                    onChange={handleInputChange}
                     className="w-full text-xs p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium p-3 rounded-2xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
+                  disabled={isLoading}
+                  className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium p-3 rounded-2xl text-xs transition-all flex items-center justify-center gap-1.5 shadow-sm cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-3.5 h-3.5" />
-                  Dispatch Communication Ticket
+                  {isLoading ? (
+                    <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                  ) : (
+                    <Send className="w-3.5 h-3.5" />
+                  )}
+                  {isLoading ? 'Processing...' : 'Dispatch Communication Ticket'}
                 </button>
               </form>
             ) : (
@@ -239,19 +298,18 @@ export default function Contact() {
                 <div className="space-y-1 max-w-sm mx-auto">
                   <h3 className="font-bold text-slate-900 text-lg">Inquiry Ticket Submitted</h3>
                   <p className="text-xs text-slate-500 leading-relaxed">
-                    Hello <span className="font-semibold text-slate-800">{name}</span>, your ticket has been successfully registered. A regional scholar coordinator is reviewing your details.
+                    Hello <span className="font-semibold text-slate-800">{formData.name}</span>, your ticket has been successfully registered. A regional scholar coordinator is reviewing your details.
                   </p>
                   <p className="text-xs text-slate-400 mt-2">
-                    Response email will go to: <span className="font-semibold text-slate-700">{email}</span>
+                    Response email will go to: <span className="font-semibold text-slate-700">{formData.email}</span>
                   </p>
                 </div>
 
                 <button
                   onClick={() => {
                     setSubmitted(false);
-                    setName('');
-                    setEmail('');
-                    setMessage('');
+                    setFormData({ name: '', email: '', subject: 'publishing', message: '' });
+                    setSubmitError(null);
                   }}
                   className="text-xs text-indigo-600 hover:text-indigo-700 font-bold border border-indigo-200 hover:border-indigo-350 px-4 py-2 rounded-xl transition-all cursor-pointer"
                 >

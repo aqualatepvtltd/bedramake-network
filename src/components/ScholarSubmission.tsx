@@ -44,7 +44,7 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
             Publish with Bedramake Network Scholar
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">
-            Submit your 5-page review papers, mini-theses, or research project drafts right here to enter our validation pipeline.
+            Submit your review papers, mini-theses, or research project drafts right here to enter our validation pipeline.
           </p>
           {setActiveTab && (
             <div className="pt-2">
@@ -118,29 +118,16 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
         <div id="form-section" className="bg-white border border-slate-150 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
           <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
             <div className="space-y-1">
-              <span className="text-xs uppercase font-mono tracking-wider text-emerald-600 font-bold block">
-                Official Dispatch Gate
-              </span>
               <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
                 <FileText className="text-emerald-500 w-5.5 h-5.5 shrink-0" />
-                Submit Your 5-Page Paper
+                Submit the Form
               </h2>
-              <p className="text-xs text-slate-500 max-w-xl">
+              <p className="text-xs text-slate-500 max-w-xxl">
                 Fill in all possible details about your review paper. This form links your manuscript files directly to our review board.
               </p>
             </div>
           </div>
 
-          {/* Note about iframe customization */}
-          <div className="bg-slate-55 border border-slate-200 rounded-xl p-4 flex gap-3 text-xs text-slate-600">
-            <AlertCircle className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" />
-            <div className="space-y-1">
-              <span className="font-bold text-slate-900">Customization Guide for Administrators</span>
-              <p>
-                This iframe demonstrates the user's submission form. To link your live active Google Form, replace the <code>iframe src</code> attribute with your own Google Form sharing code.
-              </p>
-            </div>
-          </div>
 
           {/* Google Form Iframe Container */}
           <div className="border border-slate-200 rounded-2xl overflow-hidden shadow-sm bg-slate-50 relative">

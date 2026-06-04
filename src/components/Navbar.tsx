@@ -34,7 +34,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
           >
             <img
               src="/Bedramake Main Logo (No BG).webp"
-              alt="Nedraamke logo"
+              alt="Bedraamke logo"
               className="w-18 h-18 object-contain"
             />
             

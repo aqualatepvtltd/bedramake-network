@@ -32,48 +32,38 @@ export const SECTORS: Sector[] = [
 
 export const EDITORIAL_BOARD: EditorialMember[] = [
   {
-    name: 'Dr. Evelyn Sterling',
+    name: 'Siddharth Kowsik',
     role: 'Editor-in-Chief',
-    institution: 'Stanford Research Institute',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&fit=crop'
+    institution: 'SIET, India',
+    avatar: '/siddharth-kowsik.webp'
   },
   {
-    name: 'Prof. Amara Okafor',
-    role: 'Editorial Lead (Physical Sciences)',
-    institution: 'Cambridge University',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=200&fit=crop'
+    name: 'Siddharth Kowsik',
+    role: 'Editor-in-Chief',
+    institution: 'SIET, India',
+    avatar: '/siddharth-kowsik.webp'
   },
   {
-    name: 'Dr. Hans-Dieter Becker',
-    role: 'Director of Quantitative Reviews',
-    institution: 'Tech University Munich',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&fit=crop'
+    name: 'Siddharth Kowsik',
+    role: 'Editor-in-Chief',
+    institution: 'SIET, India',
+    avatar: '/siddharth-kowsik.webp'
   },
   {
-    name: 'Dr. Priya Srinivasan',
-    role: 'Senior Editor (Bioinformatics)',
-    institution: 'Indian Institute of Science',
-    avatar: 'https://images.unsplash.com/photo-1534751516642-a131ffd107fd?q=80&w=200&h=200&fit=crop'
+    name: 'Siddharth Kowsik',
+    role: 'Editor-in-Chief',
+    institution: 'SIET, India',
+    avatar: '/siddharth-kowsik.webp'
   },
-  {
-    name: 'Dr. Priya Srinivasan',
-    role: 'Senior Editor (Bioinformatics)',
-    institution: 'Indian Institute of Science',
-    avatar: 'https://images.unsplash.com/photo-1534751516642-a131ffd107fd?q=80&w=200&h=200&fit=crop'
-  },
-  {
-    name: 'Dr. Priya Srinivasan',
-    role: 'Senior Editor (Bioinformatics)',
-    institution: 'Indian Institute of Science',
-    avatar: 'https://images.unsplash.com/photo-1534751516642-a131ffd107fd?q=80&w=200&h=200&fit=crop'
-  }
+  
+  
 ];
 
 export const FOUNDERS: Founder[] = [
   {
     name: 'Siddharth Kowsik',
     role: 'Founder & President',
-    bio: 'Former Academic Dean of Engineering. Conceived the cooperative repository model to bypass predatory paywalls.',
+    bio: 'Siddharth Kowsik is a visionary founder, educator, and pharmaceutical professional dedicated to innovation, education, and social impact. With a strong foundation in pharmacy and academic leadership, he believes in empowering minds, creating opportunities, and transforming ideas into meaningful progress.',
     avatar: '/siddharth-kowsik.webp'
   },
 ];

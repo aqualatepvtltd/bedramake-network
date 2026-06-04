@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GraduationCap, ArrowRight, ClipboardCheck, Sparkles, Send, Check, Milestone, BookOpen, Award } from 'lucide-react';
+import { GraduationCap, ArrowRight, ClipboardCheck, Sparkles, Send, Check, Milestone, BookOpen, Award, RefreshCw, AlertCircle } from 'lucide-react';
 
 export default function AdmissionHelp() {
   // Checklist States
@@ -10,11 +10,15 @@ export default function AdmissionHelp() {
   const [greToeflPassed, setGreToeflPassed] = useState(false);
 
   // Form States
-  const [studentName, setStudentName] = useState('');
-  const [studentEmail, setStudentEmail] = useState('');
-  const [targetDegree, setTargetDegree] = useState('phd');
-  const [majorField, setMajorField] = useState('');
+  const [formData, setFormData] = useState({
+    studentName: '',
+    studentEmail: '',
+    targetDegree: 'phd',
+    majorField: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
   const [requestSubmitted, setRequestSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const calculateReadinessScore = () => {
     let score = 0;
@@ -36,10 +40,46 @@ export default function AdmissionHelp() {
 
   const statusInfo = getReadinessLabel(readinessScore);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!studentName || !studentEmail) return;
-    setRequestSubmitted(true);
+    setIsLoading(true);
+    setSubmitError(null);
+
+    const payload = {
+      ...formData,
+      readiness_score: `${readinessScore}%`,
+      proposal_ready: proposalReady ? 'Yes' : 'No',
+      sop_drafted: sopDrafted ? 'Yes' : 'No',
+      cv_academic: cvAcademic ? 'Yes' : 'No',
+      advisor_list_ready: advisorList ? 'Yes' : 'No',
+      gre_toefl_passed: greToeflPassed ? 'Yes' : 'No',
+      access_key: "ea758345-9811-42db-9445-96a78c92360a",
+      from_name: "Bedramake Admission Help",
+      subject_line: `Admission Consultation: ${formData.majorField}`
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+      if (result.success) {
+        setRequestSubmitted(true);
+      } else {
+        setSubmitError("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      setSubmitError("Network error. Please check your connection.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const phases = [
@@ -189,6 +229,13 @@ export default function AdmissionHelp() {
 
                   <div className="h-px bg-slate-105" />
 
+                  {submitError && (
+                    <div className="p-4 bg-rose-50 border border-rose-100 text-rose-600 rounded-xl text-xs font-bold flex items-center gap-3">
+                      <AlertCircle className="w-4 h-4" />
+                      {submitError}
+                    </div>
+                  )}
+
                   {/* Form fields */}
                   <div className="space-y-3.5">
                     <div>
@@ -197,10 +244,11 @@ export default function AdmissionHelp() {
                       </label>
                       <input 
                         type="text" 
+                        name="studentName"
                         required
                         placeholder="Aditi Sharma"
-                        value={studentName}
-                        onChange={(e) => setStudentName(e.target.value)}
+                        value={formData.studentName}
+                        onChange={handleInputChange}
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
                       />
                     </div>
@@ -211,10 +259,11 @@ export default function AdmissionHelp() {
                       </label>
                       <input 
                         type="email" 
+                        name="studentEmail"
                         required
                         placeholder="a.sharma@du.ac.in"
-                        value={studentEmail}
-                        onChange={(e) => setStudentEmail(e.target.value)}
+                        value={formData.studentEmail}
+                        onChange={handleInputChange}
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
                       />
                     </div>
@@ -232,9 +281,9 @@ export default function AdmissionHelp() {
                           <button
                             key={deg.id}
                             type="button"
-                            onClick={() => setTargetDegree(deg.id)}
+                            onClick={() => setFormData(prev => ({ ...prev, targetDegree: deg.id }))}
                             className={`p-2 text-center rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
-                              targetDegree === deg.id 
+                              formData.targetDegree === deg.id 
                                 ? 'border-slate-900 bg-slate-900 text-white' 
                                 : 'border-slate-150 hover:bg-slate-50 text-slate-650'
                             }`}
@@ -251,10 +300,11 @@ export default function AdmissionHelp() {
                       </label>
                       <input 
                         type="text" 
+                        name="majorField"
                         required
                         placeholder="Nanophysics, Computational Genomics, Big Data NLP, etc."
-                        value={majorField}
-                        onChange={(e) => setMajorField(e.target.value)}
+                        value={formData.majorField}
+                        onChange={handleInputChange}
                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:bg-white"
                       />
                     </div>
@@ -262,10 +312,15 @@ export default function AdmissionHelp() {
 
                   <button
                     type="submit"
-                    className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium p-3 rounded-2xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
+                    disabled={isLoading}
+                    className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium p-3 rounded-2xl text-xs transition-all flex items-center justify-center gap-1.5 shadow-sm cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-3.5 h-3.5" />
-                    Request Consultation Scheduling
+                    {isLoading ? (
+                      <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                    ) : (
+                      <Send className="w-3.5 h-3.5" />
+                    )}
+                    {isLoading ? 'Processing...' : 'Request Consultation Scheduling'}
                   </button>
                 </form>
               ) : (
@@ -276,19 +331,18 @@ export default function AdmissionHelp() {
                   <div className="space-y-1">
                     <h3 className="font-bold text-slate-900 text-base">Advisory Request Dispatched</h3>
                     <p className="text-xs text-slate-500 leading-normal">
-                      Excellent choice, <span className="font-semibold text-slate-800">{studentName}</span>. Your target focus on <span className="font-semibold">{majorField}</span> has been routed to our admission panels.
+                      Excellent choice, <span className="font-semibold text-slate-800">{formData.studentName}</span>. Your target focus on <span className="font-semibold">{formData.majorField}</span> has been routed to our admission panels.
                     </p>
                     <p className="text-xs text-indigo-600">
-                      We will reach out at <span className="font-semibold">{studentEmail}</span> to coordinate a direct Zoom/Meet matching slot within 24 hours.
+                      We will reach out at <span className="font-semibold">{formData.studentEmail}</span> to coordinate a direct Zoom/Meet matching slot within 24 hours.
                     </p>
                   </div>
 
                   <button
                     onClick={() => {
                       setRequestSubmitted(false);
-                      setStudentName('');
-                      setStudentEmail('');
-                      setMajorField('');
+                      setFormData({ studentName: '', studentEmail: '', targetDegree: 'phd', majorField: '' });
+                      setSubmitError(null);
                     }}
                     className="text-xs text-indigo-600 hover:text-indigo-700 font-bold"
                   >
