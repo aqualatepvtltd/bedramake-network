@@ -68,7 +68,7 @@ export default function SectorScholar() {
                 Peer-Approved Published Papers
               </h2>
               <p className="text-xs text-slate-500">
-                Double-blind peer approved compositions compiled, formatted, and registered inside the Bedramake Network database framework.
+                Double-blind peer approved compositions compiled, formatted, and registered inside the Bedramake Network.
               </p>
             </div>
 
@@ -131,7 +131,6 @@ export default function SectorScholar() {
                 <div className="pt-4 mt-4 border-t border-slate-100 flex flex-col gap-3.5">
                   <div className="flex justify-between items-center text-[10px] font-mono text-slate-400">
                     <span>DOI: {paper.doi}</span>
-                    <span>{paper.date}</span>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2">

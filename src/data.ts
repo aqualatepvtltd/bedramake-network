@@ -281,26 +281,4 @@ export const SCHOLAR_PAPERS: ScholarPaper[] = [
     abstract: "A critical 5-page technical review cataloging Deep Neural Networks applied directly to protein folding predictions and genomic splice site identification. The paper benchmarks convolutional layers against recurrent attention spans, presenting active error rates and proposing optimal computational pipelines.",
     driveViewUrl: "https://docs.google.com/gview?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true"
   },
-  {
-    id: "sustainable-catalysis",
-    title: "Sustainable Catalysis: Modern Review on High-Entropy Alloy Nanoparticles",
-    authors: ["Arjun Mehta", "Prof. Linus Vance"],
-    discipline: "Chemical & Material Sciences",
-    pages: 5,
-    date: "April 2026",
-    doi: "10.5120/bedrascholar.2026.039",
-    abstract: "An analytical synthesis surveying active electrophysical behaviors under varying temperature gradients for advanced catalysts. Summarizes preparation techniques, lattice distortion factors, and synergistic cocktail responses occurring during noble-metal-free degradation assays.",
-    driveViewUrl: "https://docs.google.com/gview?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true"
-  },
-  {
-    id: "sdn-multiagent",
-    title: "A Survey of Multi-Agent Congestion Control Protocols in Software Defined Networks",
-    authors: ["Chen Wei", "Dr. Evelyn Sterling"],
-    discipline: "Computer Science & Networks",
-    pages: 5,
-    date: "March 2026",
-    doi: "10.5120/bedrascholar.2026.012",
-    abstract: "A 5-page survey charting queue length optimization algorithms managed by decentral agent reinforcement models. Benchmarks comparative throughput thresholds under high package congestion parameters inside modern virtualized data center structures.",
-    driveViewUrl: "https://docs.google.com/gview?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true"
-  }
 ];

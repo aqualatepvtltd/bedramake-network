@@ -138,7 +138,7 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
                     <FileCheck className="w-4 h-4" />
                   </div>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    <span className="font-bold text-slate-800">Manuscript Files:</span> Have your empirical review or research draft ready in <span className="font-mono text-xs font-bold text-indigo-600">.docx</span> or <span className="font-mono text-xs font-bold text-indigo-600">.pdf</span> format for upload.
+                    <span className="font-bold text-slate-800">Manuscript Files:</span> Have your empirical review or research draft ready in <span className="font-mono text-xs font-bold text-indigo-600">.docx</span> format for upload.
                   </p>
                 </li>
                 <li className="flex gap-3 items-start">
