@@ -61,9 +61,6 @@ export default function SectorScholar() {
         <div id="registry-section" className="space-y-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div className="space-y-1">
-              <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold block">
-                Official Scholar Index
-              </span>
               <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
                 Peer-Approved Published Papers
               </h2>
@@ -160,7 +157,7 @@ export default function SectorScholar() {
                 <AlertCircle className="w-12 h-12 text-slate-400 mx-auto" />
                 <h4 className="font-bold text-slate-800 text-base">No papers found</h4>
                 <p className="text-xs text-slate-500 max-w-sm mx-auto">
-                  Try clearing your search filters or write to coordination@bedramake.org or teambedr@gmail.com to register your upcoming manuscript.
+                  Try clearing your search filters or write to teambedr@gmail.com to register your upcoming manuscript.
                 </p>
               </div>
             )}

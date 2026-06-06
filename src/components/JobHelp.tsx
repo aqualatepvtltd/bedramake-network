@@ -188,7 +188,7 @@ export default function JobHelp() {
                   <Briefcase className="w-12 h-12 text-slate-350 mx-auto" />
                   <h4 className="font-bold text-slate-800">No vacancies match your keywords</h4>
                   <p className="text-xs text-slate-500 max-w-sm mx-auto">
-                    Try searching for wider categories like "editor" or "reviewer", or write to us directly at peer.panel@bedramake.org or teambedr@gmail.com.
+                    Try searching for wider categories like "editor" or "reviewer", or write to us directly at teambedr@gmail.com.
                   </p>
                 </div>
               )}
