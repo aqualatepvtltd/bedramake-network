@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { SCHOLAR_PAPERS } from '../data';
 import { ScholarPaper } from '../types';
@@ -13,7 +13,14 @@ interface SectorScholarProps {
 
 export default function SectorScholar() {
   const [selectedPaper, setSelectedPaper] = useState<ScholarPaper | null>(null);
+  const [isIframeLoading, setIsIframeLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    if (selectedPaper) {
+      setIsIframeLoading(true);
+    }
+  }, [selectedPaper]);
 
   const filteredPapers = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -202,14 +209,27 @@ export default function SectorScholar() {
 
             {/* PDF/Drive Embedded Area (or generic sandbox view) */}
             <div className="flex-1 bg-slate-100 relative">
+              {isIframeLoading && (
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm px-4 text-center">
+                  <div className="relative w-12 h-12">
+                    <div className="absolute inset-0 rounded-full border-4 border-slate-200" />
+                    <div className="absolute inset-0 rounded-full border-4 border-indigo-600 border-t-transparent animate-spin" />
+                  </div>
+                  <p className="mt-3 text-xs text-slate-600 uppercase tracking-wider font-semibold">
+                    Loading document...
+                  </p>
+                </div>
+              )}
+
               {/* PDF Document Frame */}
               <iframe
                 src={selectedPaper.driveViewUrl}
+                onLoad={() => setIsIframeLoading(false)}
                 className="w-full h-full border-none"
                 title={`${selectedPaper.title} Document Viewer`}
               >
                 Browser does not support document iframes.
-              </iframe>           
+              </iframe>
             </div>
 
           </div>
