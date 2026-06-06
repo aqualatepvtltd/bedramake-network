@@ -124,7 +124,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
               
               <button
                 onClick={() => setActiveTab('scholar')}
-                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-extrabold px-6 py-3.5 rounded-2xl transition-all flex items-center justify-center gap-2.5 cursor-pointer text-sm shadow-md hover:shadow-lg border-none"
+                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3.5 rounded-2xl transition-all flex items-center justify-center gap-2.5 cursor-pointer text-sm shadow-md hover:shadow-lg border-none"
                 id="hero-view-scholar-btn"
               >
                 <span className="relative flex h-2 w-2 shrink-0">
