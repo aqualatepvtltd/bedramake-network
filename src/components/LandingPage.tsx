@@ -557,7 +557,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
                     <span 
                       key={stepIdx} 
                       className={`h-2 rounded-full transition-all ${
-                        founderIndex === stepIdx ? 'bg-indigo-600 w-6' : 'bg-slate-300 w-2'
+                        founderIndex === stepIdx ? 'bg-indigo-600 w-6' : 'bg-slate-400 w-2'
                       }`}
                     />
                   ))}

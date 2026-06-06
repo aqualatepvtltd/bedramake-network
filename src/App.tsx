@@ -39,13 +39,13 @@ const Loader = () => (
 const SEO_CONFIG: Record<ActiveTab, { title: string; description: string; keywords: string[]; schema?: any }> = {
   home: {
     title: "Bedramake Network - Redefining Academic Publishing",
-    description: "Bedramake Network is a state-of-the-art open access cooperative repository & scientific sandbox. Bypass predatory journal walls with double-blind peer validation and global registers.",
-    keywords: ["academic network", "open access scientific repository", "bedramake sandbox", "double blind peer review", "doi indexer"],
+    description: "Bedramake Network is a state-of-the-art redefining academic publishing platform. Bypass predatory journal walls with double-blind peer validation and global registers.",
+    keywords: ["academic network", "open access scientific repository", "bedramake", "double blind peer review", "doi indexer"],
     schema: {
       "@type": "WebSite",
       "name": "Bedramake Network",
       "alternateName": "Bedramake Network",
-      "description": "Empowering academic authorship and reliable collaborative open-access research sandbox with professional publishing pipelines."
+      "description": "Empowering academic authorship and reliable collaborative open-access research with professional publishing pipelines."
     }
   },
   publishing: {
@@ -64,13 +64,13 @@ const SEO_CONFIG: Record<ActiveTab, { title: string; description: string; keywor
     keywords: ["bibliography creator", "shrink library pdf", "coauthor alignment search", "academic checking tools"]
   },
   about: {
-    title: "Bedramake - About Our Cooperative Sandbox Mission",
+    title: "Bedramake - About Our Cooperative Mission",
     description: "Learn about Bedramake Network's non-profit core mission: transforming the science dissemination landscape through community-led archives and free research access.",
-    keywords: ["academic mission portal", "marcus bedra provost", "clara vance core database", "nonprofit publishing sandbox"]
+    keywords: ["academic mission portal", "marcus bedra provost", "clara vance core database", "nonprofit publishing "]
   },
   contact: {
     title: "Bedramake - Contact the Editorial Board & Advisors Cell",
-    description: "Connect with the Bedramake Network submission help team, file ethical complaints, request index registrations, or contact technical sandbox support directly.",
+    description: "Connect with the Bedramake Network submission help team, file ethical complaints, request index registrations, or contact technical support directly.",
     keywords: ["contact scholar board", "editorial committee contact", "manuscript help cell"]
   },
   jobs: {
