@@ -75,9 +75,6 @@ export default function AdmissionHelp() {
         <div className="space-y-8">
           <div className="bg-white border border-slate-150 p-8 rounded-3xl shadow-sm">
             <div className="space-y-4">
-              <span className="inline-flex items-center rounded-full bg-indigo-50 text-indigo-700 px-3 py-1 text-[10px] font-bold uppercase tracking-[.22em]">
-                Admission Support
-              </span>
               <h2 className="text-3xl font-bold tracking-tight text-slate-900">
                 Tell us about your admission goals
               </h2>

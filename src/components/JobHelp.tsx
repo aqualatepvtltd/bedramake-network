@@ -357,17 +357,6 @@ export default function JobHelp() {
                 </div>
               )}
             </div>
-
-            {/* Ethic warning badge info */}
-            <div className="bg-white border border-slate-150 p-6 rounded-3xl space-y-3.5">
-              <span className="bg-amber-50 text-amber-800 text-[9px] font-mono font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-amber-100">
-                Ethical Conduct Notice
-              </span>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Bedramake Network strictly enforces absolute reviewer objectivity. Under no circumstances may panel reviewers interact directly with authors or solicit paper-trade services. Violations lead to immediate termination and blacklisting across cooperating index databases.
-              </p>
-            </div>
-
           </div>
 
         </div>
