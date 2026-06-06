@@ -196,23 +196,6 @@ export default function SectorPublishing() {
                 ))}
               </div>
             </div>
-
-            {/* Contact Banner: we'll respond with quote via phone or email */}
-            <div className="bg-slate-950 text-white rounded-2xl p-6 flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="space-y-0.5 text-center md:text-left">
-                <span className="text-slate-400 text-xs font-mono uppercase tracking-wider">
-                  Quote Requests
-                </span>
-                <p className="text-[10px] text-slate-500 italic font-mono leading-none font-sans">
-                  We'll contact you with a tailored quote on your phone or email shortly.
-                </p>
-              </div>
-              <div className="text-center md:text-right">
-                <span className="text-sm font-medium tracking-tight text-emerald-300 font-sans block">
-                  Provide phone or email in the contact form
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Contact Consultation Form (Right Panel - 5cols) */}

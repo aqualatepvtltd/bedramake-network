@@ -195,23 +195,6 @@ export default function SectorWriting() {
                 ))}
               </div>
             </div>
-
-            {/* Contact Banner: we'll respond with quote via phone or email */}
-            <div className="bg-slate-950 text-white rounded-2xl p-6 flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="space-y-0.5 text-center md:text-left">
-                <span className="text-slate-400 text-xs font-mono uppercase tracking-wider">
-                  Quote Requests
-                </span>
-                <p className="text-[10px] text-slate-500 italic font-mono leading-none">
-                  We'll contact you with a tailored quote on your phone or email shortly.
-                </p>
-              </div>
-              <div className="text-center md:text-right">
-                <span className="text-sm font-medium tracking-tight text-emerald-300 font-sans block">
-                  Provide phone or email in the contact form
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Contact Option form (Right Panel - 5cols) */}
@@ -382,28 +365,6 @@ export default function SectorWriting() {
                 </div>
               )}
             </div>
-
-            {/* Quick Benefits Sidebar Card */}
-            <div className="bg-slate-900 text-white p-6 rounded-3xl space-y-4 shadow-sm border border-slate-850">
-              <span className="text-[10px] uppercase font-mono tracking-wider text-emerald-400 font-bold block">
-                Ethical Safeguards
-              </span>
-              <ul className="space-y-3 text-xs leading-normal text-slate-350">
-                <li className="flex gap-2.5 items-start">
-                  <ShieldCheck className="w-4.5 h-4.5 text-emerald-400 mt-0.5 shrink-0" />
-                  <span>Double-blind reviewers evaluate without institutional name bias.</span>
-                </li>
-                <li className="flex gap-2.5 items-start">
-                  <ShieldCheck className="w-4.5 h-4.5 text-emerald-400 mt-0.5 shrink-0" />
-                  <span>Plagiarism check utilizes premium licensed Turnitin engines.</span>
-                </li>
-                <li className="flex gap-2.5 items-start">
-                  <ShieldCheck className="w-4.5 h-4.5 text-emerald-400 mt-0.5 shrink-0" />
-                  <span>Permanent indexing via Crossref ensuring high scholarly citations.</span>
-                </li>
-              </ul>
-            </div>
-
           </div>
 
         </div>
