@@ -271,14 +271,14 @@ export const FAQ_ITEMS: FaqItem[] = [
 
 export const SCHOLAR_PAPERS: ScholarPaper[] = [
   {
-    id: "bioinformatics-ml",
-    title: "Machine Learning Solutions in Bioinformatics: A Comparative Analysis",
-    authors: ["Sarah Jenkins", "Dr. Amit Roy"],
-    discipline: "Bioinformatics & Deep Learning",
-    pages: 5,
-    date: "May 2026",
-    doi: "10.5120/bedrascholar.2026.104",
-    abstract: "A critical 5-page technical review cataloging Deep Neural Networks applied directly to protein folding predictions and genomic splice site identification. The paper benchmarks convolutional layers against recurrent attention spans, presenting active error rates and proposing optimal computational pipelines.",
-    driveViewUrl: "https://docs.google.com/gview?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true"
+    id: "#bedramake2026001",
+    title: "Artificial Intelligence in Pharmaceutical Innovation and Research",
+    authors: ["Siddharth Kowsik"],
+    discipline: "Pharmacy",
+    pages: 0,
+    date: "June 2026",
+    doi: "10.06017/bedramake.2026.001",
+    abstract: "Artificial intelligence (AI) is revolutionizing pharmaceutical research by accelerating and refining drug discovery, development, and clinical practice. This review summarizes the role of AI across key stages of the pharmaceutical pipeline, including target identification and validation, virtual and high-throughput screening, de-novo drug design, structure- and ligand-based approaches, and drug repurposing. In preclinical research, AI enables predictive modeling of pharmacokinetic and pharmacodynamic parameters, toxicity and ADMET profiles, drug–target and drug–drug interactions, and biomarker-driven disease-pathway analysis. In formulation and manufacturing, AI supports rational formulation design, excipient and process-parameter optimization, predictive dissolution models, continuous manufacturing, and real-time release testing within quality-by-design frameworks.",
+    driveViewUrl: "https://drive.google.com/file/d/11R7fHjbQmDnGuVC1M9e8CGKtrHW2jspP/view?usp=drive_link"
   },
 ];
