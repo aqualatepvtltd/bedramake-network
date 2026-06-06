@@ -1,68 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bedramake.vercel.app/</loc>
-    <changefreq>daily</changefreq>
+    <loc>https://bedramake.org/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bedramake.vercel.app/publishing</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://bedramake.org/scholar</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bedramake.org/scholar-submission</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bedramake.vercel.app/writing</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://bedramake.org/publishing</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bedramake.vercel.app/tools</loc>
+    <loc>https://bedramake.org/writing</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bedramake.org/admission</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bedramake.org/tools</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bedramake.org/jobs</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bedramake.vercel.app/about</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://bedramake.org/contact</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://bedramake.vercel.app/contact</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://bedramake.org/about</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://bedramake.vercel.app/jobs</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://bedramake.vercel.app/admission</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bedramake.vercel.app/scholar</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://bedramake.vercel.app/scholar-submission</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://bedramake.vercel.app/terms</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://bedramake.vercel.app/privacy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://bedramake.vercel.app/cope</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>

@@ -47,9 +47,6 @@ export default function About() {
         {/* Mission Statement */}
         <div className="bg-white border border-slate-150 rounded-3xl p-8 md:p-12 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-8 space-y-4">
-            <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold block">
-              Our Scholarly Purpose
-            </span>
             <h2 className="text-2xl md:text-3xl font-bold text-slate-950 tracking-tight">
               Eradicating bias, enhancing scholarship, and simplifying academic publication.
             </h2>
@@ -61,7 +58,7 @@ export default function About() {
             </p>
           </div>
           <div className="md:col-span-4 bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center space-y-2">
-            <div className="text-4xl font-black text-indigo-600 font-mono">Q1-Q4</div>
+            <div className="text-4xl font-black text-indigo-600 font-mono">Q2-Q4</div>
             <div className="text-xs font-bold text-slate-800 uppercase tracking-wide">Publishing Indexing</div>
             <p className="text-[11px] text-slate-400">
               Assisting scholars to successfully align their manuscripts into premium indexed journals.
@@ -72,9 +69,6 @@ export default function About() {
         {/* Our Values Grid */}
         <div className="space-y-8">
           <div className="text-center space-y-2">
-            <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold">
-              Our Pillars
-            </span>
             <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
               Values That Drive Us
             </h2>
@@ -93,30 +87,6 @@ export default function About() {
                 </div>
               );
             })}
-          </div>
-        </div>
-
-        {/* Timeline Journey */}
-        <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12 space-y-8 shadow-sm">
-          <div className="space-y-2 text-center md:text-left">
-            <span className="text-xs uppercase font-mono tracking-wider text-indigo-400 font-bold block">
-              The Journey
-            </span>
-            <h2 className="text-2xl font-bold tracking-tight">
-              Our Scientific Milestone Timeline
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-            {milestones.map((m, i) => (
-              <div key={i} className="border-l-2 border-indigo-500 pl-4 space-y-1.5 py-1">
-                <span className="text-indigo-400 font-mono font-bold text-sm tracking-tight block">
-                  {m.year}
-                </span>
-                <h4 className="font-bold text-xs text-slate-100">{m.title}</h4>
-                <p className="text-[11px] text-slate-400 leading-snug">{m.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
 

@@ -50,7 +50,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
   useEffect(() => {
     if (!isMobile) {
       if (founderIndex > FOUNDERS.length - 4) {
-        setFounderIndex(FOUNDERS.length - 4);
+        setFounderIndex(Math.max(0, FOUNDERS.length - 4));
       }
       if (editorialIndex > EDITORIAL_BOARD.length - 4) {
         setEditorialIndex(Math.max(0, EDITORIAL_BOARD.length - 4));
@@ -491,7 +491,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {FOUNDERS.map((founder, idx) => {
               const isVisibleOnDesktop = idx >= founderIndex && idx < founderIndex + 4;
-              const isVisibleOnMobile = idx === founderIndex;
+              const isVisibleOnMobile = idx === founderIndex ;
               return (
                 <div 
                   key={founder.name} 
@@ -531,8 +531,11 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
 
           {/* Active indicator limit logic for Founders */}
           {(() => {
-            const maxFounderIdx = isMobile ? FOUNDERS.length - 1 : FOUNDERS.length - 4;
-            const dotCount = isMobile ? FOUNDERS.length : FOUNDERS.length - 3;
+            const maxFounderIdx = isMobile ? FOUNDERS.length - 1 : Math.max(0, FOUNDERS.length - 4);
+            const dotCount = isMobile ? FOUNDERS.length : Math.max(1, FOUNDERS.length - 3);
+            const showFounderControls = maxFounderIdx > 0;
+
+            if (!showFounderControls) return null;
             
             return (
               <div className="flex justify-center items-center gap-3 pt-10">
@@ -542,7 +545,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
                   disabled={founderIndex === 0}
                   className={`p-3 rounded-full border transition-all cursor-pointer ${
                     founderIndex === 0 
-                      ? 'border-slate-200 text-slate-350 cursor-not-allowed bg-slate-100' 
+                      ? 'border-slate-200 text-slate-300 cursor-not-allowed bg-slate-100' 
                       : 'border-slate-300 text-slate-700 bg-white hover:border-slate-400 hover:bg-slate-50 shadow-sm'
                   }`}
                   title="Previous Founders"
@@ -554,7 +557,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
                     <span 
                       key={stepIdx} 
                       className={`h-2 rounded-full transition-all ${
-                        founderIndex === stepIdx ? 'bg-indigo-600 w-6' : 'bg-slate-350 w-2'
+                        founderIndex === stepIdx ? 'bg-indigo-600 w-6' : 'bg-slate-300 w-2'
                       }`}
                     />
                   ))}
@@ -565,7 +568,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
                   disabled={founderIndex >= maxFounderIdx}
                   className={`p-3 rounded-full border transition-all cursor-pointer ${
                     founderIndex >= maxFounderIdx 
-                      ? 'border-slate-200 text-slate-350 cursor-not-allowed bg-slate-100' 
+                      ? 'border-slate-200 text-slate-300 cursor-not-allowed bg-slate-100' 
                       : 'border-slate-300 text-slate-700 bg-white hover:border-slate-400 hover:bg-slate-50 shadow-sm'
                   }`}
                   title="Next Founders"
