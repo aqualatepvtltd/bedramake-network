@@ -102,7 +102,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
               Empowering Academic Authorship
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950">
                 Redefining Academic Publishing.
               </span>
