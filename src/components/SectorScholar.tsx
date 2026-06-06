@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { SCHOLAR_PAPERS } from '../data';
 import { ScholarPaper } from '../types';
 import { 
@@ -7,10 +8,10 @@ import {
 } from 'lucide-react';
 
 interface SectorScholarProps {
-  setActiveTab?: (tab: any) => void;
+  // Navigation is now handled natively via the Router Link component
 }
 
-export default function SectorScholar({ setActiveTab }: SectorScholarProps) {
+export default function SectorScholar() {
   const [selectedPaper, setSelectedPaper] = useState<ScholarPaper | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -42,22 +43,20 @@ export default function SectorScholar({ setActiveTab }: SectorScholarProps) {
             The peer-reviewed repository for scholastic mini-reviews, thesis drafts, and undergraduate-postgraduate peer-approved manuscripts.
           </p>
           <div className="pt-2 flex justify-center gap-4 flex-wrap">
-            <button
-              onClick={() => {
-                if (setActiveTab) setActiveTab('scholar-submission');
-              }}
+            <Link
+              to="/scholar-submission"
               className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-5 py-3 rounded-2xl flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
             >
               <Send className="w-3.5 h-3.5" />
               Publish To Us (Apply Now)
-            </button>
-            <a
-              href="#registry-section"
+            </Link>
+            <button
+              onClick={() => document.getElementById('registry-section')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-white/10 hover:bg-white/15 text-white border border-white/15 text-xs font-bold px-5 py-3 rounded-2xl flex items-center gap-1.5 transition-all cursor-pointer"
             >
               <BookOpen className="w-3.5 h-3.5" />
               Browse Index Registry
-            </a>
+            </button>
           </div>
         </div>
       </section>

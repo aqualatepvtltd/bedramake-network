@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import { ActiveTab } from './types';
 import Navbar from './components/Navbar';
@@ -162,7 +162,7 @@ function AppContent() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/jobs" element={<JobHelp />} />
             <Route path="/admission" element={<AdmissionHelp />} />
-            <Route path="/scholar" element={<SectorScholar setActiveTab={handleTabChange} />} />
+            <Route path="/scholar" element={<SectorScholar />} />
             <Route path="/scholar-submission" element={<ScholarSubmission setActiveTab={handleTabChange} />} />
             <Route path="/terms" element={<TermsOfService setActiveTab={handleTabChange} />} />
             <Route path="/privacy" element={<PrivacyPolicy setActiveTab={handleTabChange} />} />
@@ -180,9 +180,9 @@ function AppContent() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppContent />
       <Analytics />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
