@@ -204,9 +204,6 @@ export default function JobHelp() {
               {!submitted ? (
                 <form onSubmit={handleApplySubmit} className="space-y-4">
                   <div className="space-y-1">
-                    <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold block">
-                      Recruitment Portal
-                    </span>
                     <h2 className="text-xl font-bold font-sans text-slate-950 tracking-tight">
                       Board Application Form
                     </h2>
