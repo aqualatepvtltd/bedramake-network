@@ -134,7 +134,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
             </div>
             <div className="flex items-start gap-2.5 text-sm">
               <MapPin className="w-4 h-4 text-slate-500 mt-0.5 shrink-0" />
-              <span>Global Academic Hub / Kolkata, India</span>
+              <span>Bihar, India</span>
             </div>
           </div>
         </div>
