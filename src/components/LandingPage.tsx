@@ -90,7 +90,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
   return (
     <div className="bg-slate-50 text-slate-800">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white py-36 md:py-36 border-b border-slate-100">
+      <section className="relative overflow-hidden bg-white py-36 md:py-52 border-b border-slate-100">
         {/* Abstract background blobs */}
         <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-indigo-50/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-slate-100/30 rounded-full blur-3xl" />
