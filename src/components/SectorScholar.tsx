@@ -106,9 +106,6 @@ export default function SectorScholar() {
                     <span className="bg-indigo-50 text-indigo-700 text-[10px] font-mono px-2.5 py-1 rounded-md font-bold tracking-tight border border-indigo-100">
                       {paper.discipline}
                     </span>
-                    <span className="text-[10px] font-mono text-slate-400 font-bold uppercase">
-                      {paper.pages} Pages • Review
-                    </span>
                   </div>
 
                   {/* Title */}
