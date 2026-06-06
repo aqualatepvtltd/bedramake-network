@@ -126,10 +126,6 @@ export default function Footer({ setActiveTab }: FooterProps) {
             </h3>
             <div className="flex items-start gap-2.5 text-sm">
               <Mail className="w-4 h-4 text-slate-500 mt-0.5 shrink-0" />
-              <span>editorial@bedramake.org</span>
-            </div>
-            <div className="flex items-start gap-2.5 text-sm">
-              <Mail className="w-4 h-4 text-slate-500 mt-0.5 shrink-0" />
               <span>teambedr@gmail.com</span>
             </div>
             <div className="flex items-start gap-2.5 text-sm">

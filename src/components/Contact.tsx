@@ -84,7 +84,7 @@ export default function Contact() {
       {/* Main Grid */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left panel - Office coordinates & contacts (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white border border-slate-150 p-6 rounded-3xl shadow-sm space-y-6">
@@ -100,41 +100,7 @@ export default function Contact() {
               <div className="h-px bg-slate-100" />
 
               <div className="space-y-4">
-                <a 
-                  href="mailto:coordination@bedramake.org"
-                  className="flex gap-3 items-center p-3 hover:bg-slate-50 rounded-xl transition-colors border border-transparent hover:border-slate-100 group"
-                >
-                  <div className="w-9 h-9 rounded-lg bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-600">
-                    <Mail className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-bold block">
-                      General & Processing Help
-                    </span>
-                    <span className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                      coordination@bedramake.org
-                    </span>
-                  </div>
-                </a>
-
-                <a 
-                  href="mailto:review.board@bedramake.org"
-                  className="flex gap-3 items-center p-3 hover:bg-slate-50 rounded-xl transition-colors border border-transparent hover:border-slate-100 group"
-                >
-                  <div className="w-9 h-9 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600">
-                    <Globe className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-bold block">
-                      Peer Review Board
-                    </span>
-                    <span className="text-xs font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                      review.board@bedramake.org
-                    </span>
-                  </div>
-                </a>
-
-                <a 
+                <a
                   href="mailto:teambedr@gmail.com"
                   className="flex gap-3 items-center p-3 hover:bg-slate-50 rounded-xl transition-colors border border-transparent hover:border-slate-100 group"
                 >
@@ -151,7 +117,7 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <div 
+                <div
                   className="flex gap-3 items-center p-3 border border-slate-100 rounded-xl bg-slate-50/50"
                 >
                   <div className="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
@@ -182,50 +148,19 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* Branches Card */}
-            <div className="bg-slate-900 text-white p-6 rounded-3xl space-y-6 border border-slate-800">
-              <div className="space-y-1">
-                <span className="text-xs uppercase font-mono tracking-wider text-indigo-400 font-bold block">
-                  Locations
-                </span>
-                <h3 className="font-bold text-lg text-slate-100 tracking-tight">Physical Study Desks</h3>
-              </div>
-              
-              <div className="space-y-6">
-                {offices.map((off, idx) => (
-                  <div key={idx} className="space-y-2 border-l-2 border-slate-700 pl-4 py-0.5">
-                    <span className="text-[10.5px] uppercase font-mono tracking-wider text-indigo-400 font-bold block">
-                      {off.city}
-                    </span>
-                    <h4 className="text-xs font-bold text-slate-200">{off.role}</h4>
-                    <p className="text-[11px] text-slate-400 flex items-start gap-1">
-                      <MapPin className="w-3.5 h-3.5 mt-0.5 text-slate-500 shrink-0" />
-                      <span>{off.address}</span>
-                    </p>
-                    <p className="text-[11px] text-slate-400 flex items-center gap-1">
-                      <Phone className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                      <span>{off.phone}</span>
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            
           </div>
 
           {/* Right panel - Dynamic Message board (7 cols) */}
           <div className="lg:col-span-7 bg-white border border-slate-150 p-6 md:p-8 rounded-3xl shadow-sm">
-            <SEO 
-              title="Contact Academic Offices" 
+            <SEO
+              title="Contact Academic Offices"
               description="Have questions about indexing, manuscript criteria, or reviewer vacancies? Reach out directly to our coordinators."
               keywords={['contact', 'support', 'academic publishing', 'help desk']}
             />
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-5 animate-fade-in">
                 <div className="space-y-1">
-                  <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold block">
-                    Contact Form
-                  </span>
                   <h2 className="text-xl md:text-2xl font-bold text-slate-950 tracking-tight">
                     File a Consultation Ticket
                   </h2>
@@ -248,8 +183,8 @@ export default function Contact() {
                     <label className="text-[10px] font-mono tracking-wider text-slate-400 uppercase font-bold block">
                       Your Name *
                     </label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="name"
                       required
                       placeholder="e.g. Dr. Vikram Iyer"
@@ -263,8 +198,8 @@ export default function Contact() {
                     <label className="text-[10px] font-mono tracking-wider text-slate-400 uppercase font-bold block">
                       Scholarly Email *
                     </label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       name="email"
                       required
                       placeholder="e.g. vikram.iyer@bits-pilani.ac.in"
@@ -279,7 +214,7 @@ export default function Contact() {
                   <label className="text-[10px] font-mono tracking-wider text-slate-400 uppercase font-bold block">
                     Inquiry Area *
                   </label>
-                  <select 
+                  <select
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
@@ -297,7 +232,7 @@ export default function Contact() {
                   <label className="text-[10px] font-mono tracking-wider text-slate-400 uppercase font-bold block">
                     Detailed Message *
                   </label>
-                  <textarea 
+                  <textarea
                     name="message"
                     rows={5}
                     required

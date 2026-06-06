@@ -94,16 +94,6 @@ export default function SectorEditorTools() {
                 ))}
               </div>
             </div>
-
-            {/* Quick Helper Banner */}
-            <div className="bg-gradient-to-br from-indigo-900 to-slate-900 text-white p-5 rounded-2xl shadow-sm space-y-3">
-              <span className="text-[10px] font-mono tracking-wider text-indigo-300 font-bold block">
-                Academic Advice
-              </span>
-              <p className="text-[11px] text-slate-350 leading-relaxed">
-                Writing your first LaTeX draft? Overleaf remains the most reliable co-authoring engine for IEEE journal structures. Use it paired with Mendeley for citation generation.
-              </p>
-            </div>
           </div>
 
           {/* Cards Directory - Right Col (3cols) */}
