@@ -37,7 +37,7 @@ export default function SectorScholar() {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-950/20 via-slate-900 to-indigo-950/20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Bedramake Network Scholar
+            Bedramake Scholar Index
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">
             The peer-reviewed repository for scholastic mini-reviews, thesis drafts, and undergraduate-postgraduate peer-approved manuscripts.
@@ -111,7 +111,7 @@ export default function SectorScholar() {
                   </h3>
 
                   {/* Abstract */}
-                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3 font-normal">
+                  <p className="text-xs text-slate-600 leading-relaxed font-normal">
                     {paper.abstract}
                   </p>
 
@@ -137,7 +137,7 @@ export default function SectorScholar() {
                       className="bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 p-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1 cursor-pointer transition-colors"
                     >
                       <Eye className="w-3.5 h-3.5" />
-                      View Paper
+                      Preview
                     </button>
                     {/* Launch in new separate window immediately */}
                     <button
@@ -145,7 +145,7 @@ export default function SectorScholar() {
                       className="bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1 cursor-pointer transition-colors"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
-                      Drive Tab
+                      View Fullscreen
                     </button>
                   </div>
                 </div>
