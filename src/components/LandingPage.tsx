@@ -97,14 +97,9 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-4xl mx-auto space-y-6">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-900 text-white rounded-full text-xs font-semibold tracking-wider uppercase font-mono shadow-sm">
-              <Zap className="w-3.5 h-3.5 text-indigo-400" />
-              Empowering Academic Authorship
-            </div>
-
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950">
-                Redefining Academic Publishing.
+                Redefining Academic Publishing
               </span>
             </h1>
 
