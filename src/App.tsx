@@ -37,7 +37,7 @@ const Loader = () => (
 // Highly optimized SEO parameters configuration catalog for every page view segment
 const SEO_CONFIG: Record<ActiveTab, { title: string; description: string; keywords: string[]; schema?: any }> = {
   home: {
-    title: "Bedramake Network",
+    title: "Bedramake Network - Redefining Academic Publishing",
     description: "Bedramake Network is a state-of-the-art open access cooperative repository & scientific sandbox. Bypass predatory journal walls with double-blind peer validation and global registers.",
     keywords: ["academic network", "open access scientific repository", "bedramake sandbox", "double blind peer review", "doi indexer"],
     schema: {
@@ -48,62 +48,62 @@ const SEO_CONFIG: Record<ActiveTab, { title: string; description: string; keywor
     }
   },
   publishing: {
-    title: "Academic Monograph & Scientific Book Publishing",
+    title: "Bedramake - Academic Monograph & Scientific Book Publishing",
     description: "Publish your scholarly books, research monographs, and corporate thesis chapters with full DOI indexing registers, meta compilation, and database archiving support.",
     keywords: ["academic book publishing", "monograph layout design", "scientific book registry", "global ISSN register"]
   },
   writing: {
-    title: "Thesis, Research Proposal & Academic Writing Mentorship",
+    title: "Bedramake - Thesis, Research Proposal & Academic Writing Mentorship",
     description: "Professional research writing assistance for master theses, synopsis compilations, doctoral research proposals, and empirical paper structures in full ethics alignment.",
     keywords: ["phd research writing", "synopsis formatting check", "thesis structure help", "scholarly drafting guidance"]
   },
   tools: {
-    title: "Scholarly Research & Editorial Validation Utilities",
+    title: "Bedramake - Scholarly Research & Editorial Validation Utilities",
     description: "Utilize our collaborative workbench suite: dynamic bibliography generator, PDF size compress files, co-author registry searches, and COPE compliance checkers.",
     keywords: ["bibliography creator", "shrink library pdf", "coauthor alignment search", "academic checking tools"]
   },
   about: {
-    title: "About Our Cooperative Sandbox Mission",
+    title: "Bedramake - About Our Cooperative Sandbox Mission",
     description: "Learn about Bedramake Network's non-profit core mission: transforming the science dissemination landscape through community-led archives and free research access.",
     keywords: ["academic mission portal", "marcus bedra provost", "clara vance core database", "nonprofit publishing sandbox"]
   },
   contact: {
-    title: "Contact the Editorial Board & Advisors Cell",
+    title: "Bedramake - Contact the Editorial Board & Advisors Cell",
     description: "Connect with the Bedramake Network submission help team, file ethical complaints, request index registrations, or contact technical sandbox support directly.",
     keywords: ["contact scholar board", "editorial committee contact", "manuscript help cell"]
   },
   jobs: {
-    title: "Academic Placement Support & Doctoral Level Vacancies",
+    title: "Bedramake - Academic Placement Support & Doctoral Level Vacancies",
     description: "Find your next tenure track placement, postdoctoral fellowship role, junior research vacancy, or laboratory associate position within our curated network.",
     keywords: ["academic postdoc jobs", "junior researcher vacancy", "university tenure path", "fellowship job boards"]
   },
   admission: {
-    title: "Top-Tier Master & PhD Admissions Advisory",
+    title: "Bedramake - Top-Tier Master & PhD Admissions Advisory",
     description: "In-depth counseling for elite global graduate programs. Expert proposal crafting, motivation letter critiques, and university scholarship selection support.",
     keywords: ["phd program admissions advice", "scholarly application mentoring", "motivation letter advisor"]
   },
   scholar: {
-    title: "Scholarly Journal Index & Published Papers Database",
+    title: "Bedramake - Scholarly Journal Index & Published Papers Database",
     description: "Explore hundreds of verified open-access articles, DOI indexed empirical results, and community verified manuscript journals in the Bedramake Network library database.",
     keywords: ["search scientific journals", "indexed scholar database", "verified research database", "doi portal"]
   },
   'scholar-submission': {
-    title: "Submit Manuscript - Double-Blind Integrity Route",
+    title: "Bedramake - Submit Manuscript - Double-Blind Integrity Route",
     description: "Deposit your verified five-page empirical papers or thesis synopsis into our peer-reviewed indexing framework. Gain immediate DOI allocation.",
     keywords: ["submit empirical draft", "author journal submission", "register scientific doi", "manuscript uploading link"]
   },
   terms: {
-    title: "Cooperative Terms of Service & Legal Framework",
+    title: "Bedramake - Cooperative Terms of Service & Legal Framework",
     description: "Discover the guidelines regulating the Bedramake Network scientific repository, academic registry access, and Creative Commons open access licensing codes.",
     keywords: ["terms of service", "user scholar licensing", "academic copyright contracts", "creative commons rules"]
   },
   privacy: {
-    title: "Privacy Policy & Double-Blind Anonymity Mandate",
+    title: "Bedramake - Privacy Policy & Double-Blind Anonymity Mandate",
     description: "How Bedramake Network ensures strict privacy for double-blind peer audits, metadata protection, and no ads or tracker networks on your scholarly papers feed.",
     keywords: ["privacy policy", "anonymity protocols", "scholar account security", "metadata safety logs"]
   },
   cope: {
-    title: "Committee on Publication Ethics Compliance Charter",
+    title: "Bedramake - Committee on Publication Ethics Compliance Charter",
     description: "Review our deep alignment with COPE standards regarding peer reviews, co-authorship guidelines, conflict declarations, and digital object protections.",
     keywords: ["COPE code of conduct", "publication ethics compliance", "plagiarism screening audits"]
   }

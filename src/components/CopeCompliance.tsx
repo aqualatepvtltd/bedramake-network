@@ -6,7 +6,6 @@ interface CopeComplianceProps {
 }
 
 export default function CopeCompliance({ setActiveTab }: CopeComplianceProps) {
-  const lastUpdated = "June 3, 2026";
 
   const corePillars = [
     {
@@ -33,18 +32,12 @@ export default function CopeCompliance({ setActiveTab }: CopeComplianceProps) {
       <section className="bg-slate-900 text-white py-14 border-b border-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/25 via-slate-900 to-indigo-950/25" />
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4 relative z-10 animate-fade-in">
-          <span className="bg-indigo-500/10 text-indigo-400 text-xs font-mono px-3 py-1 rounded-full border border-indigo-500/20 font-bold uppercase tracking-wider">
-            COPE CORE PRACTICES
-          </span>
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
             COPE Compliance
           </h1>
           <p className="text-slate-400 text-xs md:text-sm max-w-xl mx-auto font-medium">
             Our alignment with the Committee on Publication Ethics (COPE) core practices for editors, reviewers, and scientific cooperative sandboxes.
           </p>
-          <div className="text-[11px] font-mono text-slate-500">
-            Last modified: {lastUpdated}
-          </div>
         </div>
       </section>
 
