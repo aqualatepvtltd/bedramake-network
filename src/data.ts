@@ -272,7 +272,7 @@ export const FAQ_ITEMS: FaqItem[] = [
 export const SCHOLAR_PAPERS: ScholarPaper[] = [
   {
     id: "#bedramake2026001",
-    title: "Artificial Intelligence in Pharmaceutical Innovation and Research",
+    title: "Artificial Intelligence in Pharmacovigilance: Revolutionizing Drug Safety Monitoring, Adverse Event Detection, and Proactive Risk Management in the Era of Big Data and Real-Time Analytics",
     authors: ["Siddharth Kowsik"],
     discipline: "Pharmacy",
     pages: 0,
