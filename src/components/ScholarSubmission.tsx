@@ -66,12 +66,9 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
         {/* Interactive Process Flow Section */}
         <div className="bg-white border border-slate-150 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
           <div className="space-y-1">
-            <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold block">
-              The Peer-Review Roadmap
-            </span>
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
               <GraduationCap className="text-indigo-600 w-6 h-6 shrink-0" />
-              The Manuscript Publishing Pipeline
+              Manuscript Publishing
             </h2>
             <p className="text-xs text-slate-500 max-w-2xl">
               We accept brief review articles, reports, or full drafts. Once approved by editors, papers are uploaded to the public registry.
