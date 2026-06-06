@@ -188,7 +188,7 @@ export default function SectorScholar() {
                   title="Open drive document in a separate browser window"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">Drive Tab</span>
+                  <span className="hidden sm:inline">View Fullscreen</span>
                 </button>
                 <button
                   onClick={() => setSelectedPaper(null)}
