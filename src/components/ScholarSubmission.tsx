@@ -174,7 +174,7 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
                 rel="noopener noreferrer"
                 className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md group cursor-pointer text-sm"
               >
-                Proceed to Submission Gateway
+                Proceed to Submission
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>

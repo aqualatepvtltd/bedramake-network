@@ -27,7 +27,7 @@ export default function SectorScholar() {
 
   const handleOpenPaperInNewTab = (url: string) => {
     // Satisfy specific user directive: "open a separet window which will iframe that paper form drive"
-    window.open(url, '_blank', 'noreferrer');
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -50,13 +50,6 @@ export default function SectorScholar() {
               <Send className="w-3.5 h-3.5" />
               Publish To Us (Apply Now)
             </Link>
-            <button
-              onClick={() => document.getElementById('registry-section')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white/10 hover:bg-white/15 text-white border border-white/15 text-xs font-bold px-5 py-3 rounded-2xl flex items-center gap-1.5 transition-all cursor-pointer"
-            >
-              <BookOpen className="w-3.5 h-3.5" />
-              Browse Index Registry
-            </button>
           </div>
         </div>
       </section>
@@ -168,7 +161,7 @@ export default function SectorScholar() {
 
             {filteredPapers.length === 0 && (
               <div className="lg:col-span-3 bg-white border border-slate-200 rounded-3xl p-12 text-center space-y-3">
-                <AlertCircle className="w-12 h-12 text-slate-350 mx-auto" />
+                <AlertCircle className="w-12 h-12 text-slate-400 mx-auto" />
                 <h4 className="font-bold text-slate-800 text-base">No papers found</h4>
                 <p className="text-xs text-slate-500 max-w-sm mx-auto">
                   Try clearing your search filters or write to coordination@bedramake.org or teambedr@gmail.com to register your upcoming manuscript.
@@ -182,47 +175,35 @@ export default function SectorScholar() {
 
       {/* Full Sheet Scholar Reader Overlay Modal */}
       {selectedPaper && (
-        <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 flex justify-center items-end sm:items-center p-4 animate-fade-in animate-duration-200">
-          <div className="bg-white rounded-t-3xl sm:rounded-3xl w-full max-w-5xl h-[85vh] md:h-[90vh] flex flex-col overflow-hidden shadow-2xl border border-slate-250 animate-slide-up">
+        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[100] flex justify-center items-end sm:items-center p-4 md:p-6 animate-fade-in">
+          <div className="bg-white rounded-t-3xl sm:rounded-3xl w-full max-w-[calc(100vw-1.5rem)] sm:max-w-7xl h-[88vh] sm:h-[90vh] flex flex-col overflow-hidden shadow-2xl border border-slate-200 animate-slide-up relative">
             
-            {/* Modal Header */}
-            <div className="bg-slate-900 text-white p-4 md:p-6 flex justify-between items-center shrink-0 border-b border-slate-800">
-              <div className="space-y-1 select-none pr-4">
-                <span className="bg-indigo-500/10 text-indigo-400 text-[10px] font-mono px-2.5 py-1 rounded border border-indigo-500/20 font-bold uppercase tracking-wider">
-                  {selectedPaper.discipline} • DOI: {selectedPaper.doi}
-                </span>
-                <h3 className="text-sm md:text-base font-bold tracking-tight truncate max-w-md lg:max-w-2xl text-slate-100">
+            {/* Paper Info Summary bar */}
+            <div className="bg-white border-b border-slate-100 px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4 shrink-0">
+              <div className="min-w-0 flex-1">
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 truncate leading-tight">
                   {selectedPaper.title}
-                </h3>
+                </h4>
+                <p className="text-[10px] sm:text-xs text-slate-500 truncate mt-0.5">
+                  {selectedPaper.authors.join(', ')}
+                </p>
               </div>
-
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
                 <button
                   onClick={() => handleOpenPaperInNewTab(selectedPaper.driveViewUrl)}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors flex items-center gap-1 cursor-pointer shrink-0"
+                  className="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-3 py-1.5 rounded-xl text-[10px] sm:text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer"
                   title="Open drive document in a separate browser window"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">Separate Window</span>
+                  <span className="hidden sm:inline">Drive Tab</span>
                 </button>
                 <button
                   onClick={() => setSelectedPaper(null)}
-                  className="p-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg cursor-pointer transition-colors shrink-0"
+                  className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-xl cursor-pointer transition-all"
+                  aria-label="Close modal"
                 >
                   <X className="w-5 h-5" />
                 </button>
-              </div>
-            </div>
-
-            {/* Paper Info Summary bar */}
-            <div className="bg-slate-50 border-b border-slate-200 px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shrink-0 text-xs">
-              <div className="space-y-1">
-                <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest font-bold">Authors / Contributors:</span>
-                <p className="font-bold text-slate-800">{selectedPaper.authors.join(', ')}</p>
-              </div>
-              <div className="flex gap-4 font-mono text-slate-500">
-                <div>Pages: <span className="font-bold text-slate-850">{selectedPaper.pages}</span></div>
-                <div>Released: <span className="font-bold text-slate-850">{selectedPaper.date}</span></div>
               </div>
             </div>
 
@@ -235,21 +216,7 @@ export default function SectorScholar() {
                 title={`${selectedPaper.title} Document Viewer`}
               >
                 Browser does not support document iframes.
-              </iframe>
-
-              {/* Informative Floating Layer advising user of options */}
-              <div className="absolute bottom-4 left-4 right-4 bg-slate-900/95 text-white p-3.5 rounded-2xl border border-slate-800 shadow-md flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm">
-                <p className="opacity-90 leading-relaxed font-sans text-xs flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Looking for the authentic source file? You can read, print, and configure DOI trackers in Google Drive directly.</span>
-                </p>
-                <button
-                  onClick={() => handleOpenPaperInNewTab(selectedPaper.driveViewUrl)}
-                  className="bg-white text-slate-900 hover:bg-slate-100 text-[11px] font-bold px-3 py-1.5 rounded-xl cursor-pointer transition-colors shrink-0 flex items-center gap-1.5"
-                >
-                  Open in New Tab <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
+              </iframe>           
             </div>
 
           </div>
@@ -257,5 +224,6 @@ export default function SectorScholar() {
       )}
 
     </div>
-  );
+  )
 }
+
