@@ -31,7 +31,7 @@ export default function SectorEditorTools() {
       {/* Sector Header */}
       <section className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             Bedramake Network Editor Tools
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">

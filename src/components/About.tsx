@@ -32,7 +32,7 @@ export default function About() {
       {/* Page Header */}
       <section className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800 animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             About Bedramake Network
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">
@@ -50,7 +50,7 @@ export default function About() {
             <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold block">
               Our Scholarly Purpose
             </span>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-950 tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-950 tracking-tight">
               Eradicating bias, enhancing scholarship, and simplifying academic publication.
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
@@ -75,7 +75,7 @@ export default function About() {
             <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold">
               Our Pillars
             </span>
-            <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
               Values That Drive Us
             </h2>
           </div>
@@ -102,7 +102,7 @@ export default function About() {
             <span className="text-xs uppercase font-mono tracking-wider text-indigo-400 font-bold block">
               The Journey
             </span>
-            <h2 className="text-2xl font-extrabold tracking-tight">
+            <h2 className="text-2xl font-bold tracking-tight">
               Our Scientific Milestone Timeline
             </h2>
           </div>

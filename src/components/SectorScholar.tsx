@@ -35,7 +35,7 @@ export default function SectorScholar({ setActiveTab }: SectorScholarProps) {
       <section className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-950/20 via-slate-900 to-indigo-950/20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             Bedramake Network Scholar
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">
@@ -72,7 +72,7 @@ export default function SectorScholar({ setActiveTab }: SectorScholarProps) {
               <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold block">
                 Official Scholar Index
               </span>
-              <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+              <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
                 Peer-Approved Published Papers
               </h2>
               <p className="text-xs text-slate-500">
@@ -120,7 +120,7 @@ export default function SectorScholar({ setActiveTab }: SectorScholarProps) {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-base font-extrabold text-slate-900 tracking-tight leading-snug group-hover:text-indigo-600 transition-colors">
+                  <h3 className="text-base font-bold text-slate-900 tracking-tight leading-snug group-hover:text-indigo-600 transition-colors">
                     {paper.title}
                   </h3>
 
@@ -170,7 +170,7 @@ export default function SectorScholar({ setActiveTab }: SectorScholarProps) {
             {filteredPapers.length === 0 && (
               <div className="lg:col-span-3 bg-white border border-slate-200 rounded-3xl p-12 text-center space-y-3">
                 <AlertCircle className="w-12 h-12 text-slate-350 mx-auto" />
-                <h4 className="font-extrabold text-slate-800 text-base">No papers found</h4>
+                <h4 className="font-bold text-slate-800 text-base">No papers found</h4>
                 <p className="text-xs text-slate-500 max-w-sm mx-auto">
                   Try clearing your search filters or write to coordination@bedramake.org or teambedr@gmail.com to register your upcoming manuscript.
                 </p>
@@ -192,7 +192,7 @@ export default function SectorScholar({ setActiveTab }: SectorScholarProps) {
                 <span className="bg-indigo-500/10 text-indigo-400 text-[10px] font-mono px-2.5 py-1 rounded border border-indigo-500/20 font-bold uppercase tracking-wider">
                   {selectedPaper.discipline} • DOI: {selectedPaper.doi}
                 </span>
-                <h3 className="text-sm md:text-base font-extrabold tracking-tight truncate max-w-md lg:max-w-2xl text-slate-100">
+                <h3 className="text-sm md:text-base font-bold tracking-tight truncate max-w-md lg:max-w-2xl text-slate-100">
                   {selectedPaper.title}
                 </h3>
               </div>

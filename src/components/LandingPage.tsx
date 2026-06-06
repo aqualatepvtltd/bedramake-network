@@ -157,7 +157,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
                   <div className="bg-slate-900 p-2.5 rounded-xl mb-3 text-slate-400">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <div className="text-2xl md:text-3xl font-extrabold tracking-tight font-sans text-white">
+                  <div className="text-2xl md:text-3xl font-bold tracking-tight font-sans text-white">
                     {stat.value}
                   </div>
                   <div className="text-xs text-slate-400 mt-1 font-mono uppercase tracking-wider">
@@ -173,7 +173,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
       {/* The 4 Sectors Section */}
       <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
             Our Three Dedicated Sectors
           </h2>
           <p className="text-slate-600">
@@ -258,7 +258,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
       <section className="py-20 bg-slate-100 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <h2 className="text-3xl font-extrabold text-slate-900">
+            <h2 className="text-3xl font-bold text-slate-900">
               Who We Empower
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed">
@@ -320,7 +320,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-2xl" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl font-extrabold tracking-tight">
+              <h2 className="text-3xl font-bold tracking-tight">
                 Peer Review & Academic Integrity Assurance
               </h2>
               <p className="text-slate-300 text-sm md:text-base leading-relaxed">
@@ -378,7 +378,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
       <section id="editorial-board-section" className="py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
               Our Editorial Board
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
@@ -479,7 +479,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
       <section id="founders-section" className="py-20 bg-slate-50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
               Meet Our Founders
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
@@ -513,7 +513,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
                       />
                     </div>
                     <div className="space-y-1">
-                      <h3 className="font-extrabold text-slate-900 text-base tracking-tight leading-tight">
+                      <h3 className="font-bold text-slate-900 text-base tracking-tight leading-tight">
                         {founder.name}
                       </h3>
                       <p className="text-xs font-semibold text-emerald-600">
@@ -582,7 +582,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
       <section className="bg-white py-16 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
               Hear From Our Authors
             </h2>
             <p className="text-slate-600 text-sm">
@@ -614,7 +614,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
       <section className="bg-slate-50 py-16 md:py-24 border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16 space-y-2">
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
               Frequently Asked Questions
             </h2>
             <p className="text-slate-600 text-sm max-w-md mx-auto">

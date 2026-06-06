@@ -61,7 +61,7 @@ export default function AdmissionHelp() {
       {/* Page Header */}
       <section className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800 animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             Current Admission Support
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">
@@ -78,7 +78,7 @@ export default function AdmissionHelp() {
               <span className="inline-flex items-center rounded-full bg-indigo-50 text-indigo-700 px-3 py-1 text-[10px] font-bold uppercase tracking-[.22em]">
                 Admission Support
               </span>
-              <h2 className="text-3xl font-extrabold tracking-tight text-slate-900">
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900">
                 Tell us about your admission goals
               </h2>
               <p className="text-sm text-slate-500 leading-6">

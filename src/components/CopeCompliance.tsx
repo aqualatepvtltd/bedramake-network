@@ -32,7 +32,7 @@ export default function CopeCompliance({ setActiveTab }: CopeComplianceProps) {
       <section className="bg-slate-900 text-white py-14 border-b border-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/25 via-slate-900 to-indigo-950/25" />
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4 relative z-10 animate-fade-in">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">
             COPE Compliance
           </h1>
           <p className="text-slate-400 text-xs md:text-sm max-w-xl mx-auto font-medium">
@@ -59,7 +59,7 @@ export default function CopeCompliance({ setActiveTab }: CopeComplianceProps) {
 
           {/* Pillars List */}
           <div className="space-y-6">
-            <h2 className="text-lg font-extrabold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-2">
+            <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-2">
               <BookOpen className="text-indigo-600 w-5 h-5" />
               Core Academic Practices
             </h2>
@@ -70,7 +70,7 @@ export default function CopeCompliance({ setActiveTab }: CopeComplianceProps) {
                   <span className="text-[10px] bg-slate-100 border border-slate-200 text-slate-500 font-bold px-2 py-0.5 rounded font-mono">
                     RULE 0{idx + 1}
                   </span>
-                  <h3 className="font-extrabold text-slate-900 text-xs pt-1">{pillar.title}</h3>
+                  <h3 className="font-bold text-slate-900 text-xs pt-1">{pillar.title}</h3>
                   <p className="text-[11px] text-slate-500 leading-relaxed font-sans font-normal">
                     {pillar.desc}
                   </p>
@@ -82,7 +82,7 @@ export default function CopeCompliance({ setActiveTab }: CopeComplianceProps) {
           {/* Peer Review & AI Policy Detail */}
           <div className="space-y-6 border-t border-slate-150 pt-8">
             <div className="space-y-3">
-              <h2 className="text-lg font-extrabold text-slate-900 flex items-center gap-2">
+              <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
                 <UserCheck className="text-emerald-600 w-5 h-5" />
                 Reviewer & Editor Mandates
               </h2>

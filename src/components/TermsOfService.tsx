@@ -6,7 +6,7 @@ interface TermsOfServiceProps {
 }
 
 export default function TermsOfService({ setActiveTab }: TermsOfServiceProps) {
-  
+
   const sections = [
     {
       id: "acceptance",
@@ -41,7 +41,7 @@ export default function TermsOfService({ setActiveTab }: TermsOfServiceProps) {
       <section className="bg-slate-900 text-white py-14 border-b border-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/25 via-slate-900 to-indigo-950/25" />
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4 relative z-10 animate-fade-in">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">
             Terms of Service
           </h1>
           <p className="text-slate-400 text-xs md:text-sm max-w-xl mx-auto font-medium">

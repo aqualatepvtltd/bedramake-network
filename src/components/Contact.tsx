@@ -72,7 +72,7 @@ export default function Contact() {
       {/* Page Header */}
       <section className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800 animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             Contact Academic Offices
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">
@@ -189,7 +189,7 @@ export default function Contact() {
                 <span className="text-xs uppercase font-mono tracking-wider text-indigo-400 font-bold block">
                   Locations
                 </span>
-                <h3 className="font-extrabold text-lg text-slate-100 tracking-tight">Physical Study Desks</h3>
+                <h3 className="font-bold text-lg text-slate-100 tracking-tight">Physical Study Desks</h3>
               </div>
               
               <div className="space-y-6">
@@ -226,7 +226,7 @@ export default function Contact() {
                   <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold block">
                     Contact Form
                   </span>
-                  <h2 className="text-xl md:text-2xl font-extrabold text-slate-950 tracking-tight">
+                  <h2 className="text-xl md:text-2xl font-bold text-slate-950 tracking-tight">
                     File a Consultation Ticket
                   </h2>
                   <p className="text-xs text-slate-400">

@@ -89,7 +89,7 @@ export default function JobHelp() {
       {/* Page Header */}
       <section className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800 animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             Job & Career Services
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">
@@ -138,7 +138,7 @@ export default function JobHelp() {
                         <span className="bg-indigo-50 text-indigo-700 text-[9px] font-mono font-bold px-2.5 py-1 rounded-full uppercase tracking-wider border border-indigo-100/50">
                           {job.department}
                         </span>
-                        <h3 className="text-base md:text-lg font-extrabold text-slate-900 tracking-tight mt-1 group-hover:text-indigo-650 transition-colors">
+                        <h3 className="text-base md:text-lg font-bold text-slate-900 tracking-tight mt-1 group-hover:text-indigo-650 transition-colors">
                           {job.title}
                         </h3>
                       </div>

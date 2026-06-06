@@ -68,7 +68,7 @@ export default function SectorPublishing() {
       {/* Sector Header */}
       <section className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             Bedramake Network Writing Desk
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">
@@ -84,7 +84,7 @@ export default function SectorPublishing() {
           {/* Interactive Calculator (Left/Main Panel - 7cols) */}
           <div className="lg:col-span-7 bg-white border border-slate-150 p-6 md:p-8 rounded-3xl shadow-sm space-y-6">
             <div className="space-y-1">
-              <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
                 <PenTool className="w-5.5 h-5.5 text-indigo-600" />
                 Publishing Help
               </h2>

@@ -36,7 +36,7 @@ export default function PrivacyPolicy({ setActiveTab }: PrivacyPolicyProps) {
       <section className="bg-slate-900 text-white py-14 border-b border-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/25 via-slate-900 to-indigo-950/25" />
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4 relative z-10 animate-fade-in">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">
             Privacy Policy
           </h1>
           <p className="text-slate-400 text-xs md:text-sm max-w-xl mx-auto font-medium">
@@ -69,7 +69,7 @@ export default function PrivacyPolicy({ setActiveTab }: PrivacyPolicyProps) {
                   <div className="w-9 h-9 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center border border-slate-200 shadow-xs">
                     <Icon className="w-5 h-5 text-indigo-600" />
                   </div>
-                  <h3 className="font-extrabold text-slate-900 text-sm tracking-tight">{pt.title}</h3>
+                  <h3 className="font-bold text-slate-900 text-sm tracking-tight">{pt.title}</h3>
                   <p className="text-xs text-slate-500 leading-relaxed font-sans font-normal">
                     {pt.desc}
                   </p>

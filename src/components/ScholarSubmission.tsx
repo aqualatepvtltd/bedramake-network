@@ -40,7 +40,7 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
       <section className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/20 via-slate-900 to-indigo-950/20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">  
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             Publish with Bedramake Network Scholar
           </h1>
           <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-normal">
@@ -69,7 +69,7 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
             <span className="text-xs uppercase font-mono tracking-wider text-indigo-600 font-bold block">
               The Peer-Review Roadmap
             </span>
-            <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
               <GraduationCap className="text-indigo-600 w-6 h-6 shrink-0" />
               The Manuscript Publishing Pipeline
             </h2>
@@ -118,7 +118,7 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
         <div id="form-section" className="bg-white border border-slate-150 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
           <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
             <div className="space-y-1">
-              <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
                 <FileText className="text-emerald-500 w-5.5 h-5.5 shrink-0" />
                 Submit the Form
               </h2>
@@ -131,7 +131,7 @@ export default function ScholarSubmission({ setActiveTab }: ScholarSubmissionPro
           {/* Pre-submission Guide & External Gateway */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-slate-50 border border-slate-200 rounded-3xl p-6 md:p-10">
             <div className="space-y-6">
-              <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">Pre-Submission Checklist</h3>
+              <h3 className="text-lg font-bold text-slate-900 tracking-tight">Pre-Submission Checklist</h3>
               <ul className="space-y-4">
                 <li className="flex gap-3 items-start">
                   <div className="bg-indigo-100 p-1.5 rounded-lg text-indigo-600 shrink-0">
