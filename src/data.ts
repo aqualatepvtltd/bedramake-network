@@ -37,36 +37,6 @@ export const EDITORIAL_BOARD: EditorialMember[] = [
     institution: 'SIET, India',
     avatar: '/siddharth-kowsik.webp'
   },
-  {
-    name: 'Dr. Rajesh Iyer',
-    role: 'Senior Peer Reviewer',
-    institution: 'IIT Bombay',
-    avatar: 'https://i.pravatar.cc/150?u=rajesh'
-  },
-  {
-    name: 'Dr. Sunita Deshmukh',
-    role: 'Scientific Editor',
-    institution: 'IISc Bangalore',
-    avatar: 'https://i.pravatar.cc/150?u=sunita'
-  },
-  {
-    name: 'Dr. Amitav Das',
-    role: 'Data Science Consultant',
-    institution: 'NIT Trichy',
-    avatar: 'https://i.pravatar.cc/150?u=amitav'
-  },
-  {
-    name: 'Dr. Lakshmi Menon',
-    role: 'Ethics & Compliance Lead',
-    institution: 'JNU Delhi',
-    avatar: 'https://i.pravatar.cc/150?u=lakshmi'
-  },
-  {
-    name: 'Dr. Vikram Seth',
-    role: 'Statistical Analysis Head',
-    institution: 'BITS Pilani',
-    avatar: 'https://i.pravatar.cc/150?u=vikram'
-  },
 ];
 
 export const FOUNDERS: Founder[] = [
@@ -75,36 +45,6 @@ export const FOUNDERS: Founder[] = [
     role: 'Founder & President',
     bio: 'Siddharth Kowsik is a visionary founder, educator, and pharmaceutical professional dedicated to innovation, education, and social impact. With a strong foundation in pharmacy and academic leadership, he believes in empowering minds, creating opportunities, and transforming ideas into meaningful progress.',
     avatar: '/siddharth-kowsik.webp'
-  },
-  {
-    name: 'Dr. Ananya Sharma',
-    role: 'Co-Founder & CEO',
-    bio: 'Ananya is passionate about making high-quality research accessible to every Indian scholar through digital innovation and academic mentorship.',
-    avatar: 'https://i.pravatar.cc/150?u=ananya'
-  },
-  {
-    name: 'Rohan Malhotra',
-    role: 'Co-Founder & CTO',
-    bio: 'A software architect dedicated to building secure, scalable platforms for academic data management and peer-to-peer open access programs.',
-    avatar: 'https://i.pravatar.cc/150?u=rohan'
-  },
-  {
-    name: 'Priyanka Reddy',
-    role: 'Co-Founder & Operations',
-    bio: 'Focused on building global partnerships and expanding the reach of the Bedramake network to underrepresented research communities.',
-    avatar: 'https://i.pravatar.cc/150?u=priyanka'
-  },
-  {
-    name: 'Dr. Karthik Subramanian',
-    role: 'Co-Founder & Chief Scientist',
-    bio: 'Expert in empirical research methodology with a mission to elevate the quality of Indian manuscripts through rigorous double-blind reviews.',
-    avatar: 'https://i.pravatar.cc/150?u=karthik'
-  },
-  {
-    name: 'Sandeep Gupta',
-    role: 'Co-Founder & Advisor',
-    bio: 'Ensuring the sustainability and ethical growth of our scientific cooperative sandbox through strategic financial planning.',
-    avatar: 'https://i.pravatar.cc/150?u=sandeep'
   },
 ];
 
