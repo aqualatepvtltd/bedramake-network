@@ -34,9 +34,45 @@ export const EDITORIAL_BOARD: EditorialMember[] = [
   {
     name: 'Siddharth Kowsik',
     role: 'Editor-in-Chief',
-    institution: 'SIET, India',
+    institution: 'India',
     avatar: '/siddharth-kowsik.webp'
   },
+  {
+    name: 'Aman Yadav',
+    role: 'Editor',
+    institution: 'India',
+    avatar: '/aman-yadav.jpeg'
+  },
+  {
+    name: 'Aditi Priya',
+    role: 'Reviewer',
+    institution: 'India',
+    avatar: '/aditi-priya.jpeg'
+  },
+  {
+    name: 'Diksha Kumari',
+    role: 'Editor',
+    institution: 'India',
+    avatar: '/diksha-kumari.jpeg'
+  },
+  {
+    name: 'Mahima Pandey',
+    role: 'Reviewer',
+    institution: 'India',
+    avatar: '/mahima-pandey.jpeg'
+  },
+  {
+    name: 'Priya Raj',
+    role: 'Reviewer',
+    institution: 'India',
+    avatar: '/priya-raj.jpeg'
+  },
+  {
+    name: 'Sonu Kumar',
+    role: 'Editor',
+    institution: 'India',
+    avatar: '/sonu-kumar.jpeg'
+  }
 ];
 
 export const FOUNDERS: Founder[] = [

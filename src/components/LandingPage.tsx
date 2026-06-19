@@ -395,7 +395,7 @@ export default function LandingPage({ setActiveTab }: LandingPageProps) {
                     isVisible ? 'block animate-slide-in' : 'hidden'
                   }`}
                 >
-                  <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-indigo-100 shadow-sm">
+                  <div className="relative w-36 h-36 mx-auto rounded-full overflow-hidden border-2 border-indigo-100 shadow-sm">
                     <img 
                       src={member.avatar} 
                       alt={member.name} 
