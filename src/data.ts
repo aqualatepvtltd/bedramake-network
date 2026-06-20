@@ -32,44 +32,44 @@ export const SECTORS: Sector[] = [
 
 export const EDITORIAL_BOARD: EditorialMember[] = [
   {
-    name: 'Siddharth Kowsik',
+    name: 'Mr. Siddharth Kowsik',
     role: 'Editor-in-Chief',
     institution: 'India',
     avatar: '/siddharth-kowsik.webp'
   },
   {
-    name: 'Aman Yadav',
-    role: 'Editor',
+    name: 'Mr. Aman Yadav',
+    role: 'Editorial Board Member',
     institution: 'India',
     avatar: '/aman-yadav.jpeg'
   },
   {
-    name: 'Aditi Priya',
-    role: 'Reviewer',
+    name: 'Miss Aditi Priya',
+    role: 'Advisory Board Member',
     institution: 'India',
     avatar: '/aditi-priya.jpeg'
   },
   {
-    name: 'Diksha Kumari',
-    role: 'Editor',
+    name: 'Miss Diksha Kumari',
+    role: 'Editorial Board Member',
     institution: 'India',
     avatar: '/diksha-kumari.jpeg'
   },
   {
-    name: 'Mahima Pandey',
-    role: 'Reviewer',
+    name: 'Mrs. Mahima Pandey',
+    role: 'Advisory Board Member',
     institution: 'India',
     avatar: '/mahima-pandey.jpeg'
   },
   {
-    name: 'Priya Raj',
-    role: 'Reviewer',
+    name: 'Miss Priya Raj',
+    role: 'Advisory Board Member',
     institution: 'India',
     avatar: '/priya-raj.jpeg'
   },
   {
-    name: 'Sonu Kumar',
-    role: 'Editor',
+    name: 'Mr. Sonu Kumar',
+    role: 'Editorial Board Member',
     institution: 'India',
     avatar: '/sonu-kumar.jpeg'
   }
