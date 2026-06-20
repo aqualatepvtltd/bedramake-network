@@ -44,10 +44,10 @@ export const EDITORIAL_BOARD: EditorialMember[] = [
     avatar: '/aman-yadav.jpeg'
   },
   {
-    name: 'Miss Aditi Priya',
-    role: 'Advisory Board Member',
+    name: 'Mr. Sonu Kumar',
+    role: 'Editorial Board Member',
     institution: 'India',
-    avatar: '/aditi-priya.jpeg'
+    avatar: '/sonu-kumar.jpeg'
   },
   {
     name: 'Miss Diksha Kumari',
@@ -62,17 +62,18 @@ export const EDITORIAL_BOARD: EditorialMember[] = [
     avatar: '/mahima-pandey.jpeg'
   },
   {
+    name: 'Miss Aditi Priya',
+    role: 'Advisory Board Member',
+    institution: 'India',
+    avatar: '/aditi-priya.jpeg'
+  },
+  {
     name: 'Miss Priya Raj',
     role: 'Advisory Board Member',
     institution: 'India',
     avatar: '/priya-raj.jpeg'
   },
-  {
-    name: 'Mr. Sonu Kumar',
-    role: 'Editorial Board Member',
-    institution: 'India',
-    avatar: '/sonu-kumar.jpeg'
-  }
+  
 ];
 
 export const FOUNDERS: Founder[] = [
