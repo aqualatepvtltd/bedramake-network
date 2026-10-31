@@ -137,14 +137,7 @@ export default function Contact() {
                   <div className="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
                     <Phone className="w-4 h-4" />
                   </div>
-                  <div>
-                    <span className="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-bold block">
-                      Team Bedr Phone
-                    </span>
-                    <span className="text-xs font-bold text-slate-900">
-                      +91 6307595827
-                    </span>
-                  </div>
+                  
                 </div>
               </div>
             </div>
