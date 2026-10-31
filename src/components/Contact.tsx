@@ -128,17 +128,12 @@ export default function Contact() {
                       Coordinator Desk Hours
                     </span>
                     <span className="text-xs font-bold text-slate-900">
-                      Mon - Sat • 09:30 AM - 06:30 PM (IST)
+                      Mon - Sat • 9:00 AM - 6:00 PM
                     </span>
                   </div>
                 </div>
 
-                <div className="flex gap-3 items-center p-3 border border-slate-100 rounded-xl bg-slate-50/50">
-                  <div className="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
-                    <Phone className="w-4 h-4" />
-                  </div>
-                  
-                </div>
+                
               </div>
             </div>
             
